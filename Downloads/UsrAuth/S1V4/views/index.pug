@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .main.container.text-xs-center
+    h1.display-3 The most accurate snow forecast on the web.
+    p.lead We're leveraging big data to help you get more powder days this winter.
+    form(method='POST' action='/')
+      div.form-group
+          label.sr-only(for='email') Email:
+          div.input-group-addon Email list for beta &nbsp; &nbsp; &#8595;
+          input#email.form-control(type='email', placeholder='name@email.com' name='email')
+      button.btn.jumbobutton(type='submit') Join the intelligence community

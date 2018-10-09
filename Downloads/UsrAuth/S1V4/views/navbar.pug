@@ -1,0 +1,22 @@
+nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
+  button.navbar-toggler.hidden-md-up.pull-xs-right(type='button', data-toggle='collapse', data-target='#navbar') &#x2630;
+  #navbar.navbar-nav.collapse.navbar-toggleable-sm
+    .container
+      a.navbar-brand(href='/')
+        i.icn-logo.material-icons track_changes
+        | Powder Intelligence
+      .nav-items.clearfix
+      a.nav-item.nav-link(href='about') About
+      a.nav-item.nav-link(href='contact') Contact  
+//      if !currentUser
+          a.nav-item.nav-link(href='register') Sign Up  //
+
+
+      
+//    if currentUser
+        div
+          i.icn-logo.material-icons person_pin
+          a.nav-item.nav-link(href='profile') My Profile
+          a.btn.btn-light.pull-md-right(href='/logout') Log out
+      else     
+        a.btn.btn-info.pull-md-right(href='login') Log in  //

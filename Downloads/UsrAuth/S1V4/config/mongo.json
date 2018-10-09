@@ -1,0 +1,15 @@
+// config/mongo.json
+
+{
+  "development": {
+    "database": "powder_intelligence",
+    "host": "localhost"
+  },
+  "test": {
+    "database": "powder_intelligence_test",
+    "host": "localhost"
+  },
+  "production": {
+    "use_env_variable": "MONGODB_URI"
+  }
+}
