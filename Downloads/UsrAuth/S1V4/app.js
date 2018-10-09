@@ -8,22 +8,22 @@ var app = express();
 
 
 //Mongoose settings
-const { Email } = require('./models/email');
-var mongoose = require('mongoose');
-
-console.log('mongoose is ready.')
-
-app.use((req, res, next) => {
-  console.log('use for mongoose callback')
-  if (mongoose.connection.readyState) {
-    console.log('if (mongoose.connection.readyState)')
-    next();
-  } else {
-    console.log('else (mongoose.connection.readyState)')
-    require('./mongo')().then(() => next());
-    console.log('else (mongoose.connection.readyState)')
-  }
-});
+// const { Email } = require('./models/email');
+// var mongoose = require('mongoose');
+//
+// console.log('mongoose is ready.')
+//
+// app.use((req, res, next) => {
+//   console.log('use for mongoose callback')
+//   if (mongoose.connection.readyState) {
+//     console.log('if (mongoose.connection.readyState)')
+//     next();
+//   } else {
+//     console.log('else (mongoose.connection.readyState)')
+//     require('./mongo')().then(() => next());
+//     console.log('else (mongoose.connection.readyState)')
+//   }
+// });
 
 // mongo connection
 mongoose.set('useFindAndModify', false);
