@@ -1,0 +1,189 @@
+
+/* Base Styles */
+
+body {
+	background: url('../images/mountain_back.jpg') no-repeat;
+	background-size: cover;
+}
+
+a:hover {
+	color: #C1CAD6;
+}
+
+/* Component Styles */
+
+.navbar {
+	padding: 1rem 0;
+	background: rgba(0,0,0, .25);
+}
+.lead {
+	margin-bottom: 2.5rem;
+}
+.main {
+	color: #fff;
+	min-height: calc(100vh - 34px);
+}
+.foot {
+	font-size: .85rem;
+	padding: .5rem 0;
+	color: rgba(255,255,255, .6);
+}
+
+/* email collector style */
+
+.emailtroll {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.jumbobutton {
+  border-radius: 100rem;
+  padding: 1rem;
+  font-family: 'Avenir Next';
+  font-size: 1rem;
+  padding: .5rem 3rem;
+  color: #426BF4;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #426BF4);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+}
+
+.jumbobutton:hover {
+  box-shadow: none;
+  color: white;
+}
+
+/* Modifier Styles */
+
+
+
+.nav-items .nav-link {
+	margin: 0 1rem;
+}
+.navbar-brand {
+	margin: 0;
+}
+.navbar .nav-link,
+.navbar .btn {
+	text-transform: uppercase;
+	font-size: .95rem;
+}
+.list-group {
+	color: initial;
+}
+.label {
+	font-size: .88rem;
+	vertical-align: top;
+	margin: 3px 0 0 4px;
+}
+
+/* Button Styles */
+
+.btn-primary {
+	background: #426BF4;
+	border-color: #6C6EA0;
+}
+.btn-info {
+	background-color: #C1CAD6;
+	border-color: #6C6EA0;
+}
+.btn-info:hover {
+	background-color: #6C6EA0;
+	border-color: #6C6EA0;
+}
+.btn-light {
+	color: rgba(255,255,255, .75);
+	background: rgba(255,255,255, .12);
+}
+.btn-light:hover {
+	background: rgba(255,255,255, .2);
+}
+.active,
+.btn {
+	transition: .4s;
+}
+
+/* Icon Styles */
+
+.icn-logo {
+	margin: 3px 3px 0;
+	float: left;
+}
+.icn-person {
+	font-size: 56px;
+	border-radius: 50%;
+	border: solid 2px;
+	padding: .5rem;
+}
+.avatar {
+	width: 35px;
+	margin-right: 18px;
+	border: solid 2px rgba(255,255,255, .75);
+}
+.options {
+	display: none;
+}
+.list-group-item:hover .options {
+	display: block;
+}
+.options .material-icons {
+	font-size: 1.25rem;
+	cursor: pointer;
+	margin-left: 1rem;
+	color: rgba(0,0,0, .35);
+}
+.options .material-icons:hover {
+	color: initial;
+}
+
+.home-mountain {
+  margin-top: 30px;
+}
+
+/* Media Queries */
+
+@media (min-width: 0) and (max-width: 47em) {
+	.navbar {
+		background: #426BF4;
+	}
+	.nav-items .nav-item {
+		float: none;
+	}
+	.nav-items .nav-link  {
+		padding: .65rem 0;
+		display: block;
+	}
+	.nav-items {
+		padding: 1rem 0;
+		clear: left;
+	}
+	.navbar .btn {
+		margin-left: 1rem;
+	}
+	.main {
+		padding-top: 6rem;
+	}
+}
+
+@media (min-width: 48em) {
+	.navbar {
+		min-height: 70px;
+	}
+	.navbar-nav .container {
+		display: -webkit-flex;
+		display: flex;
+	}
+	.nav-items {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.main {
+		padding-top: 8rem;
+	}
+}
