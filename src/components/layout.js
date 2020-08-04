@@ -24,8 +24,7 @@ const Container = styled.div`
 `
 
 const Page = styled.div`
-  margin: 0 5vw;
-  
+  padding: 5vw 5vw;
 `
 
 const Layout = ({ children }) => {

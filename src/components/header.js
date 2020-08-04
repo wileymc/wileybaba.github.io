@@ -27,11 +27,13 @@ const Container = styled.div`
     color: ${props => props.theme.colors.textColor};
   }
   h1 {
+    margin: 0;
     font-size: 6vw;
   }
 `
 
 const Links = styled.div`
+  margin-top: 1rem;
   list-style-type: none;
   display: flex;
   cursor: default;
