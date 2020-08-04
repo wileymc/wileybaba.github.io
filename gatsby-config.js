@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `John Doe`,
-    description: `John's Personal Website`,
-    author: `Somesh Kar @someshkar <somesh.kar@gmail.com>`,
+    title: `puerta cerrada denver`,
+    description: `Closed door dining in Denver's Whittier neighborhood`,
+    author: `Wiley McKay Conte <wileymckayconte@gmail.com>`,
   },
-  pathPrefix: `/gatsby-starter-darkmode`,
+  pathPrefix: `/puerta-cerrada`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `John Doe`,
-        short_name: `John's Website`,
+        name: `Puerta Cerrada Denver`,
+        short_name: `pcd`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

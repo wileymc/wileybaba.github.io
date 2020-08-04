@@ -18,7 +18,7 @@ const ContactPage = () => (
   <Layout>
     <SEO title="Reservations" />
     <h1>reservations</h1>
-    <p>Puerto Cerrado offers limited reservations each week for parties of 6 or more.</p>
+    <p>Puerta Cerrada offers limited reservations each week for parties of 6 or more.</p>
     <FancyBox><p>For reservations text: <a href="tel:720-513-2233">(720) 513-2233</a></p></FancyBox>
     <p>When you text us, please include:</p>
     <ul>

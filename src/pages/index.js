@@ -14,7 +14,7 @@ const IndexPage = () => (
       of Whittier, Denver's oldest and most diverse historic neighborhood.
     </p>
     <p>
-      As our name implies, Puerto Cerrado is a closed door dining establishment. In other words, we welcome guests
+      As our name implies, Puerta Cerrada is a closed door dining establishment. In other words, we welcome guests
       into our home for a unique culinary experience on a reservation only basis. This concept, popularized in Buenos Aires, Argentina,
       lends itself to unparalleled culinary intimacy.
     </p>

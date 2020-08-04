@@ -49,7 +49,7 @@ const Header = ({ isDark, setIsDark }) => (
   
   <Container>
     <Link style={{ color: 'inherit', textDecoration: 'none' }} to="/">
-      <h1>puerto cerrado denver</h1>
+      <h1>puerta cerrada denver</h1>
     </Link>
     <Links>
       {links.map(link => (
