@@ -20,7 +20,7 @@ const Container = styled.div`
     color: ${props => props.theme.colors.pink};
     text-decoration: none;
   }
-  font-size: 1.4rem;
+  font-size: 1rem;
 `
 
 const Page = styled.div`

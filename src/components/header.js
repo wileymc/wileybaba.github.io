@@ -33,7 +33,7 @@ const Container = styled.div`
 `
 
 const Links = styled.div`
-  margin-top: 1rem;
+  margin: 1rem 0;
   list-style-type: none;
   display: flex;
   cursor: default;
