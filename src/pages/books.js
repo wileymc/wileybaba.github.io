@@ -198,8 +198,8 @@ const books = [
 const BooksPage = () => (
   <Layout>
     <SEO title="Knowledge" />
-    {books.map((book) => (
-      <Card>
+    {books.map((book, i) => (
+      <Card key={i}>
         <img src={book.thumbnail} />
         <div>
           <h1>{book.title}</h1>

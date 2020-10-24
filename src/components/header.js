@@ -38,10 +38,11 @@ const Container = styled.div`
   @media only screen and (min-width: 600px) {
     margin-top: 6rem;
   }
-  max-width: 26rem;
+  max-width: fit-content;
   height: 4rem;
   display: grid;
-  margin-bottom: 3rem;
+  grid-gap: 1rem;
+  margin-bottom: 5rem;
   grid-template-areas:
     'logo header'
     'logo mainLinks'
@@ -55,7 +56,7 @@ const Container = styled.div`
   h1 {
     grid-area: header;
     margin: 0;
-    font-size: 2.3rem;
+    font-size: 3rem;
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     letter-spacing: 0.1rem;
     background: linear-gradient(
@@ -74,8 +75,8 @@ const Container = styled.div`
 
 const RoboLogo = styled.img`
   grid-area: logo;
-  height: 70px;
-  width: 70px;
+  height: 100px;
+  height: 100px;
   cursor: pointer;
 
   @media only screen and (max-width: 600px) {
@@ -89,6 +90,7 @@ const Links = styled.nav`
   display: flex;
   justify-content: left;
   align-items: center;
+  font-size: 1.5rem;
   cursor: default;
 `;
 
@@ -99,7 +101,7 @@ const SecondaryLinks = styled.nav`
   justify-content: left;
   align-items: center;
   cursor: default;
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 700;
 
   li {
@@ -129,7 +131,8 @@ const LinksItem = styled.li`
   cursor: pointer;
   user-select: none;
   margin-right: 1rem;
-  color: ${(props) => props.theme.colors.textColor};
+  color: ${(props) =>
+    props.active ? props.theme.colors.pink : props.theme.colors.textColor};
   &:hover {
     color: ${(props) => props.theme.colors.pink};
   }
@@ -137,47 +140,50 @@ const LinksItem = styled.li`
   -webkit-transition: color 0.15s cubic-bezier(0.6, 0, 0.85, 0.72);
 `;
 
-const Header = ({ isDark, setIsDark }) => (
-  <Container>
-    <RoboBrand />
-    <div style={{ marginTop: '-0.3rem' }}>
-      <Link
-        style={{
-          color: 'inherit',
-          textDecoration: 'none',
-          gridArea: 'header',
-        }}
-        to="/"
-      >
-        <h1>WILEY</h1>
-      </Link>
-      <Links>
-        {links.map((link) => (
-          <LinksItem key={link.href}>
-            <Link
-              style={{ color: 'inherit', textDecoration: 'none' }}
-              to={link.href}
-            >
-              {link.title}
-            </Link>
-          </LinksItem>
-        ))}
-      </Links>
-      <SecondaryLinks>
-        {secondaryLinks.map((link) => (
-          <LinksItem key={link.href}>
-            <Link
-              style={{ color: 'inherit', textDecoration: 'none' }}
-              to={link.href}
-            >
-              {link.title}
-            </Link>
-          </LinksItem>
-        ))}
-        <Icon isDark={isDark} setIsDark={setIsDark} />
-      </SecondaryLinks>
-    </div>
-  </Container>
-);
+const Header = ({ isDark, setIsDark }) => {
+  const { pathname } = window.location;
+  return (
+    <Container>
+      <RoboBrand />
+      <div style={{ marginTop: '-0.3rem' }}>
+        <Link
+          style={{
+            color: 'inherit',
+            textDecoration: 'none',
+            gridArea: 'header',
+          }}
+          to="/"
+        >
+          <h1>WILEY</h1>
+        </Link>
+        <Links>
+          {links.map((link) => (
+            <LinksItem key={link.href} active={pathname === link.href}>
+              <Link
+                style={{ color: 'inherit', textDecoration: 'none' }}
+                to={link.href}
+              >
+                {link.title}
+              </Link>
+            </LinksItem>
+          ))}
+        </Links>
+        <SecondaryLinks>
+          {secondaryLinks.map((link) => (
+            <LinksItem key={link.href}>
+              <Link
+                style={{ color: 'inherit', textDecoration: 'none' }}
+                to={link.href}
+              >
+                {link.title}
+              </Link>
+            </LinksItem>
+          ))}
+          <Icon isDark={isDark} setIsDark={setIsDark} />
+        </SecondaryLinks>
+      </div>
+    </Container>
+  );
+};
 
 export default Header;

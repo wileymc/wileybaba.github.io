@@ -37,7 +37,6 @@ const Layout = ({ children }) => {
     } else {
       localIsDark = true;
     }
-    console.log(localIsDark ? 'dark mode' : 'light mode');
   }
 
   const [isDark, setIsDark] = useState(localIsDark);
