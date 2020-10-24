@@ -47,7 +47,8 @@ const books = [
   {
     title: 'In the Beginning...was the Command Line',
     author: 'Neal Stephenson',
-    thumbnail: 'https://wileys.website/img/books/command_line.jpg',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/51GpHlxx6cL._SX320_BO1,204,203,200_.jpg',
     description:
       'Quick read that will get you thinking about switching from Mac/Windows over to Linux. This book is a bit outdated, but still a great read for those interested in computers.',
   },
@@ -70,7 +71,8 @@ const books = [
   {
     title: 'Sex at Dawn',
     author: 'Christopher Ryan',
-    thumbnail: 'https://wileys.website/img/books/sex_at_dawn.jpg',
+    thumbnail:
+      'https://upload.wikimedia.org/wikipedia/en/f/f2/Sex_at_Dawn%2C_first_edition.jpg',
     description:
       'A new classic which argues that humans are instinctively not monogomous creatures. Have we evolved to be sluts?',
   },
@@ -92,14 +94,16 @@ const books = [
   {
     title: 'The Industries of the Future',
     author: 'Alex Ross',
-    thumbnail: 'https://wileys.website/img/books/industries_future.jpg',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/71s-MrcZOTL.jpg',
     description:
       'An excellent look at the worlds shifting economies. Focus on robotics, machine learning, code-ification of money, big data, and other industries.',
   },
   {
     title: 'The Checklist Manifesto: How to Get Things Right.',
     author: 'Atul Gawande',
-    thumbnail: 'https://wileys.website/img/books/checklist_manifesto.jpg',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/71CwWiCJhuL.jpg',
     description:
       'A nifty little book that discusses how something as simple as a checklist is saving lives in operating rooms around the world. Checklists can be applied to a wide range of professions and can ensure that simple mistakes are a thing of the past.',
   },
