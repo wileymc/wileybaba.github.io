@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `puerta cerrada denver`,
-    description: `Closed door dining in Denver's Whittier neighborhood`,
+    title: `wileys.website`,
+    description: `images, art, and writings by wiley mckay conte`,
     author: `Wiley McKay Conte <wileymckayconte@gmail.com>`,
   },
-  pathPrefix: `/puerta-cerrada`,
+  pathPrefix: `/wileys-website`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -15,13 +15,21 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Puerta Cerrada Denver`,
-        short_name: `pcd`,
+        name: `convivial`,
+        short_name: `convivial`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -44,4 +52,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

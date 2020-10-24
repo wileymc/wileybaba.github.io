@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-darkmode",
+  "name": "convivial",
   "private": true,
-  "description": "A simple starter to get up and developing websites with a dark mode quickly with Gatsby",
+  "description": "Tools for conviviality",
   "version": "0.1.0",
-  "author": "Somesh Kar <somesh.kar@gmail.com>",
+  "author": "Wiley McKay Conte",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.18.12",
@@ -14,7 +14,8 @@
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sharp": "^2.3.5",
     "gatsby-plugin-styled-components": "^3.1.16",
-    "gatsby-source-filesystem": "^2.1.40",
+    "gatsby-source-filesystem": "^2.3.35",
+    "gatsby-transformer-remark": "^2.8.46",
     "gatsby-transformer-sharp": "^2.3.7",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -23,7 +24,19 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-config-wesbos": "1.0.1",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "^2.1.1"
   },
   "keywords": [
     "gatsby"

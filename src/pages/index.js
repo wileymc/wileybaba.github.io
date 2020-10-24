@@ -1,24 +1,45 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import Image from '../components/image'
-import styled from 'styled-components'
+const QuoteContainer = styled.div`
+  border-left: 2px solid ${(props) => props.theme.colors.pink};
+`;
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Welcome</h1>
+    <SEO title="wiley mckay conte" />
     <p>
-      We invite you to join us for a clandestine dining experience in the heart
-      of Whittier, Denver's oldest and most diverse historic neighborhood.
+      <strong>Welcome to my website.</strong> I’m a software developer with a
+      background in economics and ecological agriculture. I am fascinated by
+      human-computer interaction and I enjoy building things things that help
+      people interface with the real world. I also make pottery and music when
+      I’m not writing code or enjoying the great outdoors.
     </p>
-    <p>
-      As our name implies, Puerta Cerrada is a closed door dining establishment. In other words, we welcome guests
-      into our home for a unique culinary experience on a reservation only basis. This concept, popularized in Buenos Aires, Argentina,
-      lends itself to unparalleled culinary intimacy.
-    </p>
-  </Layout>
-)
 
-export default IndexPage
+    <p>
+      Currently, I am building software to help improve the immigration process
+      at <a href="https://legalpad.io">Legalpad</a>. I enjoy writing code in{' '}
+      <code className="js">JavaScript</code> and <code className="go">Go</code>,
+      but also have experience with <code className="python">Python</code>,{' '}
+      <code className="ruby">Ruby</code>, <code className="php">PHP</code>, and{' '}
+      <code className="cplus">C++</code>. Please reach out to me on one of the
+      channels below if you’d like to connect.
+    </p>
+    {/* <QuoteContainer>
+      <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>A desirable future depends on our deliberately choosing a life
+        of action over a life of consumption, on our engendering a lifestyle
+        which will enable us to be spontaneous, independent, yet related to each
+        other, rather than maintaining a lifestyle which only allows to make and
+        unmake, produce and consume – a style of life which is merely a way
+      station on the road to the depletion and pollution of the environment.</p>
+        <footer>—Ivan Illich, <cite>Tools for Conviviality</cite></footer>
+      </blockquote>
+    </QuoteContainer> */}
+  </Layout>
+);
+
+export default IndexPage;

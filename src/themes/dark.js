@@ -3,11 +3,13 @@
 export default {
   name: 'dark',
   icon: require('../images/icons/moon.png'),
+  robo: require('../images/icons/Robobrand_white.png'),
   colors: {
-    background: '#44404d',
-    cardBackground: '#403C5B',
-    headingColor: '#82BBCF',
+    background: '#32374a',
+    cardBackground: '#3e4357',
+    headingColor: '#0080ff',
     textColor: '#ffffff',
-    pink: '#f54272'
+    pink: '#ff73a9',
+    blue: 'dodgerblue',
   },
-}
+};
