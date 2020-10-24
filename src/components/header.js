@@ -140,8 +140,9 @@ const LinksItem = styled.li`
   -webkit-transition: color 0.15s cubic-bezier(0.6, 0, 0.85, 0.72);
 `;
 
-const Header = ({ isDark, setIsDark }) => {
-  const { pathname } = window.location;
+const Header = ({ path, isDark, setIsDark }) => {
+  const pathname =
+    typeof window !== 'undefined' ? window.location.pathname : '';
   return (
     <Container>
       <RoboBrand />
