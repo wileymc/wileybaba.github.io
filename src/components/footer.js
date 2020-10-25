@@ -13,6 +13,7 @@ const Container = styled.footer`
   display: flex;
   justify-content: flex-end;
   background-color: ${(props) => props.theme.colors.background};
+  transition: all 0.5s ease-out;
   svg {
     margin-left: 1rem;
     color: ${(props) => props.theme.colors.icons};
