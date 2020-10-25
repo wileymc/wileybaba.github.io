@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React, { useContext } from 'react';
+import React from 'react';
 import {
   AiFillTwitterCircle,
   AiFillInstagram,
@@ -9,9 +9,10 @@ import { FaCodeBranch } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const Container = styled.footer`
-  margin: 5vh 0;
+  margin-top: 5vh;
   display: flex;
-  float: right;
+  justify-content: flex-end;
+  background-color: ${(props) => props.theme.colors.background};
   svg {
     margin-left: 1rem;
     color: ${(props) => props.theme.colors.icons};
