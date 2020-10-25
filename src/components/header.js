@@ -42,7 +42,7 @@ const Container = styled.div`
   height: 4rem;
   display: grid;
   grid-gap: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10vh;
   grid-template-areas:
     'logo header'
     'logo mainLinks'
@@ -70,6 +70,12 @@ const Container = styled.div`
     -webkit-text-fill-color: transparent;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+  }
+
+  @media only screen and (max-width: 321px) {
+    nav {
+      font-size: 1.2rem;
+    }
   }
 `;
 

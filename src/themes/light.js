@@ -11,5 +11,6 @@ export default {
     textColor: '#000000',
     pink: '#ff73a9',
     blue: 'dodgerblue',
+    icons: '#575757',
   },
 };
