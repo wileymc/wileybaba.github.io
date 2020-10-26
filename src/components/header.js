@@ -84,7 +84,7 @@ const RoboLogo = styled.img`
   height: 100px;
   height: 100px;
   cursor: pointer;
-
+  transition: all 0.5s ease-out;
   @media only screen and (max-width: 600px) {
     display: none;
   }

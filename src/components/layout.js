@@ -17,7 +17,11 @@ const Container = styled.div`
   color: ${(props) => props.theme.colors.textColor};
   transition: all 0.5s ease-out;
   a {
-    color: ${(props) => props.theme.colors.blue};
+    color: inherit;
+    transition: all 0.5s ease-out;
+    &:hover {
+      color: ${(props) => props.theme.colors.blue};
+    }
     text-decoration: none;
   }
   font-size: 1rem;

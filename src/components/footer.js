@@ -14,6 +14,7 @@ const Container = styled.footer`
   justify-content: flex-end;
   background-color: ${(props) => props.theme.colors.background};
   transition: all 0.5s ease-out;
+
   svg {
     margin-left: 1rem;
     color: ${(props) => props.theme.colors.icons};
@@ -27,10 +28,28 @@ const Container = styled.footer`
 
 const Footer = () => (
   <Container>
-    <AiFillTwitterCircle size="1.5rem" />
-    <AiFillInstagram size="1.5rem" />
-    <AiFillMail size="1.5rem" />
-    <FaCodeBranch size="1.5rem" />
+    <a href="https://twitter.com/wiley_baba" target="_blank" rel="noreferrer">
+      <AiFillTwitterCircle size="1.5rem" />
+    </a>
+    <a href="https://instagram.com/wileybaba" target="_blank" rel="noreferrer">
+      <AiFillInstagram size="1.5rem" />
+    </a>
+    <a
+      href="mailto: wileymckayconte@gmail.com"
+      title="email wiley"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <AiFillMail size="1.5rem" />
+    </a>
+    <a
+      href="https://github.com/wileybaba/wileybaba.github.io"
+      target="_blank"
+      rel="noreferrer"
+      title="fork this site"
+    >
+      <FaCodeBranch size="1.5rem" />
+    </a>
   </Container>
 );
 
