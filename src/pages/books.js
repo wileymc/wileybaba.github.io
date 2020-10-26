@@ -6,6 +6,59 @@ import SEO from '../components/seo';
 import { Card } from '../components/base';
 
 const books = [
+  // {
+  //   title: '',
+  //   author: '',
+  //   thumbnail: '',
+  //   description: '',
+  // },
+  {
+    title: 'I Contain Multitudes: The Microbes Within Us',
+    author: 'Ed Yong',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/51EGX0zBe1L._SX329_BO1,204,203,200_.jpg',
+    description:
+      "Detailed look a the microbial world that exists around us and within us.  From parasitic wasps to monkey's assholes to our own intestines, microbes make up much of the natural world.  The influence of an organisms microbiome is stark - our microbes influence our behavior and health in unfathomable ways.",
+  },
+  {
+    title: 'A Place of My Own',
+    author: 'Michael Pollan',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/91ZssyMdwPL.jpg',
+    description:
+      'A fantastic account of the building of Pollans writing house, a small cabin the author used to pen several of his notable works.  From conception, to blueprint, to construction, this book follows the lifecycle of a building and offers a unique look at what it takes to build something from scratch.  ',
+  },
+  {
+    title: 'The Circle',
+    author: 'Dave Eggers',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/41O954TrofL._SX321_BO1,204,203,200_.jpg',
+    description:
+      'Great piece of realistic fiction that follows the rise of a new employee at a massive technology conglomerate with massive reach.  A tale on the perils of technological oversight and privacy infringement.',
+  },
+  {
+    title: 'Suburban Nation',
+    author: 'Andres Duany',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/61dnWm6sBoL._SX258_BO1,204,203,200_.jpg',
+    description:
+      'How modern development is destroying community and the environment.  The author argues that we need new developments to mimic the traditional neighborhoods to eliminate sprawl, reduce crime, and engender proper communities',
+  },
+  {
+    title: 'Cure: A Journey into the Science of Mind Over Body',
+    author: 'Jo Marchant',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/713mO2r72QL.jpg',
+    description:
+      'Telling tale of the power of thought on our health.  From powerful placebos, to curing IBS with cognitive behavioral therapy, this book provides an in depth look at our ability to shape how we feel with our thoughts.',
+  },
+  {
+    title: 'The Gene: An Intimate History',
+    author: 'Siddhartha Mukherjee',
+    thumbnail: 'https://m.media-amazon.com/images/I/417RAmvqvFL.jpg',
+    description:
+      'An excellent look at the history of genetic research and the industry of genomics.  From the production of synthetic insulin to high consequence gene therapy, this book provided an excellent account of where genetics has gone and where it is heading',
+  },
   {
     title: 'Island',
     author: 'Aldous Huxley',
@@ -83,13 +136,6 @@ const books = [
       'https://images-na.ssl-images-amazon.com/images/I/51HL0dOfXNL._SX329_BO1,204,203,200_.jpg',
     description:
       'A compelling case for getting those 8 + hours each night. Walker takes a look at a wide range of health problems associated with lack of sleep, sleep disorders, the new science of dreams, and more.',
-  },
-  {
-    title: 'Zero to One',
-    author: 'Blake Masters and Peter Thiel',
-    thumbnail: 'https://images.gr-assets.com/books/1427728884l/23251016.jpg',
-    description:
-      'This a great read for anyone interested startups, entrepreneurship, or internet technology.',
   },
   {
     title: 'The Industries of the Future',
@@ -188,11 +234,6 @@ const books = [
     description:
       'Well written and researched book about flow states, ecstasis, and neurohacking.',
   },
-  // {
-  //   title: '',
-  //   author: '',
-  //   description: '',
-  // },
 ];
 
 const BooksPage = () => (
@@ -200,7 +241,7 @@ const BooksPage = () => (
     <SEO title="Knowledge" />
     {books.map((book, i) => (
       <Card key={i}>
-        <img src={book.thumbnail} />
+        <img src={book.thumbnail} alt="thumbnail" />
         <div>
           <h1>{book.title}</h1>
           <h2>{book.author}</h2>
