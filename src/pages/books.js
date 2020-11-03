@@ -245,8 +245,8 @@ const BooksPage = () => (
         <div>
           <h1>{book.title}</h1>
           <h2>{book.author}</h2>
-          <p>{book.description}</p>
         </div>
+        <p>{book.description}</p>
       </Card>
     ))}
   </Layout>
