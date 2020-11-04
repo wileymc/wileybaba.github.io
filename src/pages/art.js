@@ -38,8 +38,8 @@ export default function ArtPage() {
             style={{ width: 500 }}
           />
           <div>
-            <h1>Collaborative mural at Red Door Hostel in Anjuna</h1>
-            <h2>Goa, India</h2>
+            <h1>Collaborative mural in Anjuna</h1>
+            <h2>Red Door Hostel - Goa, India</h2>
           </div>
         </Card>
       ))}
