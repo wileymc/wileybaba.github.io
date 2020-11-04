@@ -4,12 +4,6 @@ export const Heading = styled.h1`
   color: ${(props) => props.theme.colors.headingColor};
 `;
 export const Card = styled.div`
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-areas:
-    'image title'
-    'image description';
-  grid-template-columns: 150px auto;
   align-content: baseline;
   width: auto;
   padding: 1rem;
@@ -17,6 +11,31 @@ export const Card = styled.div`
   background: ${(props) => props.theme.colors.cardBackground};
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   margin: 1.5rem 0;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: auto auto;
+
+  h1 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  p {
+    margin: 0;
+    font-size: 1em;
+  }
+`;
+
+export const BookCard = styled(Card)`
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'image title'
+    'image description';
+  grid-template-columns: 150px auto;
+
   div {
     grid-area: title;
   }
