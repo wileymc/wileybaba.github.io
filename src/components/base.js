@@ -10,13 +10,11 @@ export const Card = styled.div`
   border-radius: 5px;
   background: ${(props) => props.theme.colors.cardBackground};
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  margin: 1.5rem 0;
-  display: flex;
-  grid-gap: 1rem;
+  }
 
   h1 {
     font-size: 1.5em;
-    margin: 0;
+    margin: 1rem 0 0 0;
   }
   h2 {
     font-size: 1.2em;
@@ -24,6 +22,17 @@ export const Card = styled.div`
   p {
     margin: 0;
     font-size: 1em;
+  }
+`;
+
+export const CardGrid = styled.main`
+  display: grid;
+  grid-template-columns: 'repeat(${(props) => props.columns ?? 2}, 1fr';
+  grid-gap: 1.5rem;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-columns: auto;
+    grid-gap: 1rem;
   }
 `;
 

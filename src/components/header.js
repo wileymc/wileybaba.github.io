@@ -165,7 +165,7 @@ const Header = ({ isDark, setIsDark }) => {
         </Link>
         <Links>
           {links.map((link) => (
-            <LinksItem key={link.href} active={pathname === link.href}>
+            <LinksItem key={link.href} active={pathname.includes(link.href)}>
               <Link
                 style={{ color: 'inherit', textDecoration: 'none' }}
                 to={link.href}

@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { BookCard, Card } from '../components/base';
+import { BookCard, Card, CardGrid } from '../components/base';
 
 const books = [
   // {
@@ -247,16 +247,18 @@ const books = [
 const BooksPage = () => (
   <Layout>
     <SEO title="Knowledge" />
-    {books.map((book, i) => (
-      <BookCard key={i}>
-        <img src={book.thumbnail} alt="thumbnail" />
-        <div>
-          <h1>{book.title}</h1>
-          <h2>{book.author}</h2>
-        </div>
-        <p>{book.description}</p>
-      </BookCard>
-    ))}
+    <CardGrid columns={1}>
+      {books.map((book, i) => (
+        <BookCard key={i}>
+          <img src={book.thumbnail} alt="thumbnail" />
+          <div>
+            <h1>{book.title}</h1>
+            <h2>{book.author}</h2>
+          </div>
+          <p>{book.description}</p>
+        </BookCard>
+      ))}
+    </CardGrid>
   </Layout>
 );
 
