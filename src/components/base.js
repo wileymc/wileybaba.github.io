@@ -11,9 +11,8 @@ export const Card = styled.div`
   background: ${(props) => props.theme.colors.cardBackground};
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   margin: 1.5rem 0;
-  display: grid;
+  display: flex;
   grid-gap: 1rem;
-  grid-template-columns: auto auto;
 
   h1 {
     font-size: 1.5em;
