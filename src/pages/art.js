@@ -44,8 +44,8 @@ export default function ArtPage() {
     <Layout>
       <SEO title="Tools" />
       <CardGrid>
-        {data.allFile.edges.map((image) => (
-          <Card key={Math.random()} className="art">
+        {data.allFile.edges.map((image, i) => (
+          <Card key={i} className="art">
             <Img
               fluid={image.node.childImageSharp.fluid}
               alt={image.node.base.split('.')[0]}
