@@ -13,6 +13,14 @@ const books = [
   //   description: '',
   // },
   {
+    title: 'Dune',
+    author: 'Frank Herbert',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/91Fq9Amx0pL.jpg',
+    description:
+      "I've taken the plunge into the world of the sand planet Arrakis, and there is no looking back. Herberts first novel in the Dune series walks us through an epic journey of son and mother, of betrayal and sacrifice, of life on the unforgiving desert planet of Dune.  Water is scarce and gigantic sand worms are plenty.",
+  },
+  {
     title: 'I Contain Multitudes: The Microbes Within Us',
     author: 'Ed Yong',
     thumbnail:

@@ -7,7 +7,7 @@ import { Card } from '../components/base';
 
 export default function ArtPage() {
   const data = useStaticQuery(graphql`
-    query {
+    query ArtPageImages {
       allFile(
         filter: {
           extension: { regex: "/(jpg)|(png)|(jpeg)/" }
@@ -31,7 +31,7 @@ export default function ArtPage() {
     <Layout>
       <SEO title="Tools" />
       {data.allFile.edges.map((image) => (
-        <Card>
+        <Card key={Math.random()}>
           <Img
             fluid={image.node.childImageSharp.fluid}
             alt={image.node.base.split('.')[0]}
