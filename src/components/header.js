@@ -97,6 +97,7 @@ const Links = styled.nav`
   justify-content: left;
   align-items: center;
   font-size: 1.5rem;
+  font-weight: 300;
   cursor: default;
 `;
 
