@@ -71,7 +71,7 @@ export default function ArtPage() {
               }}
             >
               <h1>Tripple Handle Swirly</h1>
-              <Tag backgroundColor="orange">FOR SALE</Tag>
+              <Tag>FOR SALE</Tag>
             </div>
             <h2>Red and white stoneware</h2>
           </div>

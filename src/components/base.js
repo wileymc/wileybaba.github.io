@@ -9,6 +9,7 @@ export const Card = styled.div`
   padding: 1rem;
   border-radius: 5px;
   background: ${(props) => props.theme.colors.cardBackground};
+  transition: all 0.5s ease-out;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
@@ -85,8 +86,8 @@ export const Tag = styled.div`
   border-radius: 4px;
   /* background: ${(props) => props.backgroundColor ?? 'azure'}; */
   background: linear-gradient(
-    155deg,
-    dodgerblue 25.09%,
-    mediumspringgreen 42.58%
+    201deg,
+    rgba(0, 250, 154, 1) 3%,
+    rgba(30, 144, 255, 1) 56%
   );
 `;
