@@ -31,7 +31,7 @@ export default function ArtPage() {
           node {
             base
             childImageSharp {
-              fluid {
+              fluid(quality: 100, maxWidth: 1000) {
                 ...GatsbyImageSharpFluid
               }
             }
