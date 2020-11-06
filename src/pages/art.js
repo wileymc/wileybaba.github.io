@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { Card } from '../components/base';
+import { Card, Tag } from '../components/base';
 import Video from '../components/video';
 
 const CardGrid = styled.main`
@@ -42,7 +42,7 @@ export default function ArtPage() {
   `);
   return (
     <Layout>
-      <SEO title="Tools" />
+      <SEO title="Art" />
       <CardGrid>
         {data.allFile.edges.map((image, i) => (
           <Card key={i} className="art">
@@ -63,7 +63,16 @@ export default function ArtPage() {
             videoTitle="Tripple Handle Swirly"
           />
           <div>
-            <h1>Tripple Handle Swirly</h1>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'baseline',
+              }}
+            >
+              <h1>Tripple Handle Swirly</h1>
+              <Tag backgroundColor="orange">FOR SALE</Tag>
+            </div>
             <h2>Red and white stoneware</h2>
           </div>
         </Card>

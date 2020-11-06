@@ -246,7 +246,7 @@ const books = [
 
 const BooksPage = () => (
   <Layout>
-    <SEO title="Knowledge" />
+    <SEO title="Reading list" />
     <CardGrid columns={1}>
       {books.map((book, i) => (
         <BookCard key={i}>

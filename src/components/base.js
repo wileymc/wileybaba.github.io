@@ -76,3 +76,17 @@ export const BookCard = styled(Card)`
     }
   }
 `;
+
+export const Tag = styled.div`
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  /* background: ${(props) => props.backgroundColor ?? 'azure'}; */
+  background: linear-gradient(
+    155deg,
+    dodgerblue 25.09%,
+    mediumspringgreen 42.58%
+  );
+`;
