@@ -42,7 +42,11 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `IBM Plex Sans`,
+            family: `Merriweather`,
+            variants: [`400`, `700`],
+          },
+          {
+            family: `Raleway`,
             variants: [`400`, `700`],
           },
         ],
