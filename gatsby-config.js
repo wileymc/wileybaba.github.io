@@ -47,7 +47,7 @@ module.exports = {
           },
           {
             family: `Raleway`,
-            variants: [`300`, `700`],
+            variants: [`200`, `700`],
           },
         ],
       },
