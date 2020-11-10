@@ -6,6 +6,7 @@ export const Heading = styled.h1`
 export const Card = styled.div`
   align-content: baseline;
   width: auto;
+  height: fit-content;
   padding: 1rem;
   border-radius: 5px;
   background: ${(props) => props.theme.colors.cardBackground};

@@ -11,7 +11,7 @@ import Video from '../components/video';
 
 const CardGrid = styled.main`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(8rem, 100%));
   grid-gap: 1.5rem;
 
   @media only screen and (max-width: 600px) {
@@ -32,6 +32,16 @@ export default function ArtPage() {
       }
 
       spaceMonkey: file(relativePath: { eq: "art/space_monkey.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      bipolarDepression: file(
+        relativePath: { eq: "art/bipolar_depression.jpg" }
+      ) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1000) {
             ...GatsbyImageSharpFluid
@@ -79,12 +89,23 @@ export default function ArtPage() {
         <Card className="art">
           <Img
             fluid={artImages.spaceMonkey.childImageSharp.fluid}
-            alt="mural image"
+            alt="space moneky image"
             style={{ width: 'auto' }}
           />
           <div>
             <h1>Space Monkey</h1>
-            <h2>Ink and watercolor</h2>
+            <h2>Ink and watercolor on paper</h2>
+          </div>
+        </Card>
+        <Card className="art">
+          <Img
+            fluid={artImages.bipolarDepression.childImageSharp.fluid}
+            alt="bipolar image"
+            style={{ width: 'auto', filter: 'contrast(160%)' }}
+          />
+          <div>
+            <h1>Bipolar depression</h1>
+            <h2>Marker on paper</h2>
           </div>
         </Card>
       </CardGrid>

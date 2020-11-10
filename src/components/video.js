@@ -11,7 +11,14 @@ const Container = styled.div`
 
 const Video = ({ source, width, showControls = false, filter }) => (
   <Container width={width}>
-    <video controls={showControls} muted autoPlay loop style={{ filter }}>
+    <video
+      controls={showControls}
+      muted
+      playinline
+      autoPlay
+      loop
+      style={{ filter }}
+    >
       <source src={source} type="video/mp4" />
     </video>
   </Container>
