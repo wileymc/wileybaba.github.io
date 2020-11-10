@@ -21,9 +21,17 @@ const CardGrid = styled.main`
 `;
 
 export default function ArtPage() {
-  const goaMuralImage = useStaticQuery(graphql`
+  const artImages = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "art/goa_mural.JPG" }) {
+      goaMural: file(relativePath: { eq: "art/goa_mural.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      spaceMonkey: file(relativePath: { eq: "art/space_monkey.jpg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1000) {
             ...GatsbyImageSharpFluid
@@ -32,13 +40,14 @@ export default function ArtPage() {
       }
     }
   `);
+
   return (
     <Layout>
       <SEO title="Art" />
       <CardGrid>
         <Card className="art">
           <Img
-            fluid={goaMuralImage.placeholderImage.childImageSharp.fluid}
+            fluid={artImages.goaMural.childImageSharp.fluid}
             alt="mural image"
             style={{ width: 'auto' }}
           />
@@ -48,11 +57,6 @@ export default function ArtPage() {
           </div>
         </Card>
         <Card className="art">
-          {/* <YouTube
-            videoSrcURL="https://www.youtube.com/embed/IaXfVOYv7Kc?rel=0;&autoplay=1&mute=1&loop=1&controls=0&modestbranding&showinfo=0"
-            videoTitle="Tripple Handle Swirly"
-          /> */}
-          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
           <Video source={Swirly01} showControls={false} />
           <div>
             <div
@@ -66,6 +70,17 @@ export default function ArtPage() {
               <Tag>FOR SALE</Tag>
             </div>
             <h2>Red and white stoneware</h2>
+          </div>
+        </Card>
+        <Card className="art">
+          <Img
+            fluid={artImages.spaceMonkey.childImageSharp.fluid}
+            alt="mural image"
+            style={{ width: 'auto' }}
+          />
+          <div>
+            <h1>Space Monkey</h1>
+            <h2>Ink and watercolor</h2>
           </div>
         </Card>
       </CardGrid>
