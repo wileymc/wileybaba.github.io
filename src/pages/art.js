@@ -57,7 +57,11 @@ export default function ArtPage() {
           </div>
         </Card>
         <Card className="art">
-          <Video source={Swirly01} showControls={false} />
+          <Video
+            source={Swirly01}
+            showControls={false}
+            filter="brightness(160%)"
+          />
           <div>
             <div
               style={{
