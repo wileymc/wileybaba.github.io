@@ -14,7 +14,7 @@ const Video = ({ source, width, showControls = false, filter }) => (
     <video
       controls={showControls}
       muted
-      playinline
+      playsInline
       autoPlay
       loop
       style={{ filter }}
