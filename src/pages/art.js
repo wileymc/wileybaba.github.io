@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { Card, Tag } from '../components/base';
+import Swirly01 from '../videos/swirly01.mp4';
+import YouTube from '../components/YouTube';
 import Video from '../components/video';
 
 const CardGrid = styled.main`
@@ -19,22 +21,12 @@ const CardGrid = styled.main`
 `;
 
 export default function ArtPage() {
-  const data = useStaticQuery(graphql`
-    query ArtPageImages {
-      allFile(
-        filter: {
-          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-          relativeDirectory: { eq: "art" }
-        }
-      ) {
-        edges {
-          node {
-            base
-            childImageSharp {
-              fluid(quality: 100, maxWidth: 1000) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+  const goaMuralImage = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "art/goa_mural.JPG" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -44,24 +36,24 @@ export default function ArtPage() {
     <Layout>
       <SEO title="Art" />
       <CardGrid>
-        {data.allFile.edges.map((image, i) => (
-          <Card key={i} className="art">
-            <Img
-              fluid={image.node.childImageSharp.fluid}
-              alt={image.node.base.split('.')[0]}
-              style={{ width: 'auto' }}
-            />
-            <div>
-              <h1>Collaborative mural in Anjuna</h1>
-              <h2>Red Door Hostel - Goa, India</h2>
-            </div>
-          </Card>
-        ))}
         <Card className="art">
-          <Video
+          <Img
+            fluid={goaMuralImage.placeholderImage.childImageSharp.fluid}
+            alt="mural image"
+            style={{ width: 'auto' }}
+          />
+          <div>
+            <h1>Collaborative mural in Anjuna</h1>
+            <h2>Red Door Hostel - Goa, India</h2>
+          </div>
+        </Card>
+        <Card className="art">
+          {/* <YouTube
             videoSrcURL="https://www.youtube.com/embed/IaXfVOYv7Kc?rel=0;&autoplay=1&mute=1&loop=1&controls=0&modestbranding&showinfo=0"
             videoTitle="Tripple Handle Swirly"
-          />
+          /> */}
+          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+          <Video source={Swirly01} showControls={false} />
           <div>
             <div
               style={{
