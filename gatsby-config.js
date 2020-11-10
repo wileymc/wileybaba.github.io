@@ -28,13 +28,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `convivial`,
-        short_name: `convivial`,
+        name: `wileys website`,
+        short_name: `wileys website`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `dodgerblue`,
+        theme_color: `dodgerblue`,
         display: `minimal-ui`,
-        icon: `src/images/icons/moon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icons/Robobrand.png`, // This path is relative to the root of the site.
       },
     },
     {
