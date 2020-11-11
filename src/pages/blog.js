@@ -19,19 +19,16 @@ const FancyBox = styled.div`
   }
 `;
 
-const BlogPage = ({ data }) => {
-  console.log(data);
-  return (
-    <Layout>
-      <SEO title="Blog" />
-      <FancyBox>
-        {/* <h2>Computer science</h2> */}
-        <p>Its been a while, but here are some of my old posts.</p>
-      </FancyBox>
-      <PostListing postEdges={data.allMarkdownRemark.edges} />
-    </Layout>
-  );
-};
+const BlogPage = ({ data }) => (
+  <Layout>
+    <SEO title="Blog" />
+    <FancyBox>
+      {/* <h2>Computer science</h2> */}
+      <p>Its been a while, but here are some of my old posts.</p>
+    </FancyBox>
+    <PostListing postEdges={data.allMarkdownRemark.edges} />
+  </Layout>
+);
 
 export const pageQuery = graphql`
   {
