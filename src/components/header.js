@@ -25,8 +25,8 @@ const links = [
 
 const secondaryLinks = [
   {
-    title: 'BUY ME A COFFEE',
-    href: 'https://www.buymeacoffee.com/wiley',
+    title: 'MY WORK',
+    href: '/work',
   },
   {
     title: 'BLOG',
