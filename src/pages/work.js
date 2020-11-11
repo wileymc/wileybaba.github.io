@@ -24,7 +24,8 @@ const BlogPage = ({ data }) => {
           </a>{' '}
           is streamlining the immigration process for global talent with
           sophisticated petition building software. We have helped hundreds of
-          startups tackle the nuanced and stubborn processes behind US work visa
+          startups tackle the nuanced and stubborn processes behind US work
+          visas.
         </p>
 
         <p>
