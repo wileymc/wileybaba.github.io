@@ -70,6 +70,24 @@ const Container = styled.div`
     -webkit-text-fill-color: transparent;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+    animation: hue 10s infinite linear;
+    -webkit-animation: hue 60s infinite linear;
+    @keyframes hue {
+      from {
+        filter: hue-rotate(0deg);
+      }
+      to {
+        filter: hue-rotate(90deg);
+      }
+    }
+    @-webkit-keyframes hue {
+      from {
+        -webkit-filter: hue-rotate(0deg);
+      }
+      to {
+        -webkit-filter: hue-rotate(-360deg);
+      }
+    }
   }
 
   @media only screen and (max-width: 321px) {

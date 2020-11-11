@@ -39,9 +39,7 @@ export default function ArtPage() {
         }
       }
 
-      bipolarDepression: file(
-        relativePath: { eq: "art/bipolar_depression.jpg" }
-      ) {
+      bipolarBiped: file(relativePath: { eq: "art/bipolar_depression.jpg" }) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1000) {
             ...GatsbyImageSharpFluid
@@ -99,7 +97,7 @@ export default function ArtPage() {
         </Card>
         <Card className="art">
           <Img
-            fluid={artImages.bipolarDepression.childImageSharp.fluid}
+            fluid={artImages.bipolarBiped.childImageSharp.fluid}
             alt="bipolar image"
             style={{ width: 'auto', filter: 'contrast(160%)' }}
           />
