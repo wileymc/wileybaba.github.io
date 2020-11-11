@@ -88,7 +88,7 @@ export default function ArtPage() {
           <Img
             fluid={artImages.spaceMonkey.childImageSharp.fluid}
             alt="space moneky image"
-            style={{ width: 'auto' }}
+            style={{ width: 'auto', filter: 'contrast(135%)' }}
           />
           <div>
             <h1>Space Monkey</h1>
@@ -102,7 +102,7 @@ export default function ArtPage() {
             style={{ width: 'auto', filter: 'contrast(160%)' }}
           />
           <div>
-            <h1>Bipolar depression</h1>
+            <h1>Bipolar Biped</h1>
             <h2>Marker on paper</h2>
           </div>
         </Card>
