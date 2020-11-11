@@ -12,6 +12,8 @@ const FancyBox = styled.div`
   width: fit-content;
   border-radius: 8px;
   p {
+    font-size: 1em;
+    line-height: 1em;
     margin: 0;
     color: ${(props) => props.theme.colors.pink};
   }
