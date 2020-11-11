@@ -9,19 +9,25 @@ const Container = styled.div`
   }
 `;
 
-const Video = ({ source, width, showControls = false, filter }) => (
-  <Container width={width}>
-    <video
-      controls={showControls}
-      muted
-      playsInline
-      autoPlay
-      loop
-      style={{ filter }}
-    >
-      <source src={source} type="video/mp4" />
-    </video>
-  </Container>
-);
+const Video = ({ source, width, showControls = false, filter }) => {
+  const videoRef = useRef(null);
+  useEffect(() => (videoRef.current.playbackRate = 3), []);
+
+  return (
+    <Container width={width}>
+      <video
+        controls={showControls}
+        muted
+        playsInline
+        autoPlay
+        loop
+        style={{ filter }}
+        ref={videoRef}
+      >
+        <source src={source} type="video/mp4" />
+      </video>
+    </Container>
+  );
+};
 
 export default Video;
