@@ -8,7 +8,7 @@ export default {
     background: '#ffffff',
     cardBackground: '#f0f0f0',
     headingColor: '#0080ff',
-    textColor: '#000000',
+    textColor: '#333300',
     pink: '#ff73a9',
     blue: 'dodgerblue',
     icons: '#575757',

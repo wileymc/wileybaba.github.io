@@ -95,6 +95,12 @@ const Container = styled.div`
       font-size: 1.2rem;
     }
   }
+
+  li {
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+      sans-serif;
+  }
 `;
 
 const RoboLogo = styled.img`
