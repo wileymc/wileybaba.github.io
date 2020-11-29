@@ -2,6 +2,7 @@
 slug: "/blog/javascript-frameworks"
 date: "2018-02-28"
 title: "Choosing a JavaScript Framework"
+draft: false
 ---
 
 When I first dove deep into the world of front end web development, I was astonished at the immense amount of open-source frameworks and tool sets that were at my disposal. How was I to choose between learning Angular, Vue, or React? What about Ember or Backbone or any of the other lesser known Javascript frameworks? I decided to take a pragmatic approach and learn everything I could about vanilla JavaScript before building out anything beyond a "Hello World" with the hot new new.

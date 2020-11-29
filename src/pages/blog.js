@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import React from 'react';
 
 import styled from 'styled-components';
@@ -33,6 +33,7 @@ const BlogPage = ({ data }) => (
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
+      filter: { frontmatter: { draft: { eq: false } } }
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 1000
     ) {
