@@ -176,7 +176,7 @@ const LinksItem = styled.li`
   }
 `;
 
-const Header = ({ isDark, setIsDark }) => {
+const Header = ({ isDark, toggleTheme }) => {
   const pathname =
     typeof window !== 'undefined' ? window.location.pathname : '';
   return (
@@ -220,7 +220,7 @@ const Header = ({ isDark, setIsDark }) => {
               </Link>
             </LinksItem>
           ))}
-          <Icon isDark={isDark} setIsDark={setIsDark} />
+          <Icon isDark={isDark} toggleTheme={toggleTheme} />
         </SecondaryLinks>
       </div>
     </Container>

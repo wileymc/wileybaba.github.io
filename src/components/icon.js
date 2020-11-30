@@ -13,15 +13,15 @@ const HeavenlyBody = styled.img`
   }
 `;
 
-function Icon({ isDark, setIsDark }) {
+function Icon({ isDark, toggleTheme }) {
   const themeContext = useContext(ThemeContext);
 
-  const handleClick = () => {
-    localStorage.setItem('isDark', !isDark);
-    setIsDark(!isDark);
-  };
-
-  return <HeavenlyBody src={themeContext.icon} onClick={handleClick} />;
+  return (
+    <HeavenlyBody
+      src={themeContext.icon}
+      onClick={() => toggleTheme(isDark ? 'light' : 'dark')}
+    />
+  );
 }
 
 export default Icon;

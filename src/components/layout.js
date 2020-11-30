@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
 import Header from './header';
 import Footer from './footer';
@@ -33,35 +34,21 @@ const Page = styled.div`
   padding: 1rem;
 `;
 
-const Layout = ({ children }) => {
-  const [localIsDark, setLocalIsDark] = useState(
-    localStorage.getItem('isDark')
-  );
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (localStorage.getItem('isDark') === 'false') {
-        setLocalIsDark(false);
-      } else {
-        setLocalIsDark(true);
-      }
-    }
-  }, []);
-
-  const [isDark, setIsDark] = useState(localIsDark);
-
-  return (
-    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-      <Container>
-        <Page>
-          <Header isDark={isDark} setIsDark={setIsDark} />
-          <main>{children}</main>
-          <Footer />
-        </Page>
-      </Container>
-    </ThemeProvider>
-  );
-};
+const Layout = ({ children }) => (
+  <ThemeToggler>
+    {({ theme, toggleTheme }) => (
+      <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+        <Container>
+          <Page>
+            <Header isDark={theme === 'dark'} toggleTheme={toggleTheme} />
+            <main>{children}</main>
+            <Footer />
+          </Page>
+        </Container>
+      </ThemeProvider>
+    )}
+  </ThemeToggler>
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
