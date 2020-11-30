@@ -165,8 +165,6 @@ const LinksItem = styled.li`
   &:hover {
     color: ${(props) => props.theme.colors.pink};
   }
-  transition: color 0.15s cubic-bezier(0.6, 0, 0.85, 0.72);
-  -webkit-transition: color 0.15s cubic-bezier(0.6, 0, 0.85, 0.72);
 `;
 
 const Header = ({ isDark, toggleTheme }) => (
