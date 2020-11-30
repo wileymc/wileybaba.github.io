@@ -36,17 +36,22 @@ const Page = styled.div`
 
 const Layout = ({ children }) => (
   <ThemeToggler>
-    {({ theme, toggleTheme }) => (
-      <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
-        <Container>
-          <Page>
-            <Header isDark={theme === 'dark'} toggleTheme={toggleTheme} />
-            <main>{children}</main>
-            <Footer />
-          </Page>
-        </Container>
-      </ThemeProvider>
-    )}
+    {({ theme, toggleTheme }) => {
+      if (theme == null) {
+        return null;
+      }
+      return (
+        <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+          <Container>
+            <Page>
+              <Header isDark={theme === 'dark'} toggleTheme={toggleTheme} />
+              <main>{children}</main>
+              <Footer />
+            </Page>
+          </Container>
+        </ThemeProvider>
+      );
+    }}
   </ThemeToggler>
 );
 
