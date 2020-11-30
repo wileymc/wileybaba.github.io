@@ -162,69 +162,61 @@ const LinksItem = styled.li`
   cursor: pointer;
   user-select: none;
   margin-right: 1rem;
-  color: ${(props) =>
-    props.active ? props.theme.colors.pink : props.theme.colors.textColor};
   &:hover {
     color: ${(props) => props.theme.colors.pink};
   }
   transition: color 0.15s cubic-bezier(0.6, 0, 0.85, 0.72);
   -webkit-transition: color 0.15s cubic-bezier(0.6, 0, 0.85, 0.72);
-
-  &.secondary {
-    text-decoration: ${(props) => (props.active ? 'underline' : null)};
-    text-decoration-style: dotted;
-  }
 `;
 
-const Header = ({ isDark, toggleTheme }) => {
-  const pathname =
-    typeof window !== 'undefined' ? window.location.pathname : '';
-  return (
-    <Container>
-      <RoboBrand />
-      <div style={{ marginTop: '-0.3rem' }}>
-        <Link
-          style={{
-            color: 'inherit',
-            textDecoration: 'none',
-            gridArea: 'header',
-          }}
-          to="/"
-        >
-          <h1>WILEY</h1>
-        </Link>
-        <Links>
-          {links.map((link) => (
-            <LinksItem key={link.href} active={pathname.includes(link.href)}>
-              <Link
-                style={{ color: 'inherit', textDecoration: 'none' }}
-                to={link.href}
-              >
-                {link.title}
-              </Link>
-            </LinksItem>
-          ))}
-        </Links>
-        <SecondaryLinks>
-          {secondaryLinks.map((link) => (
-            <LinksItem
-              key={link.href}
-              className="secondary"
-              active={pathname.includes(link.href)}
+const Header = ({ isDark, toggleTheme }) => (
+  <Container>
+    <RoboBrand />
+    <div style={{ marginTop: '-0.3rem' }}>
+      <Link
+        style={{
+          color: 'inherit',
+          textDecoration: 'none',
+          gridArea: 'header',
+        }}
+        to="/"
+      >
+        <h1>WILEY</h1>
+      </Link>
+      <Links>
+        {links.map((link) => (
+          <LinksItem key={link.href}>
+            <Link
+              style={{ color: 'inherit', textDecoration: 'none' }}
+              activeStyle={{ color: '#ff73a9' }}
+              to={link.href}
+              partiallyActive
             >
-              <Link
-                style={{ color: 'inherit', textDecoration: 'none' }}
-                to={link.href}
-              >
-                {link.title}
-              </Link>
-            </LinksItem>
-          ))}
-          <Icon isDark={isDark} toggleTheme={toggleTheme} />
-        </SecondaryLinks>
-      </div>
-    </Container>
-  );
-};
+              {link.title}
+            </Link>
+          </LinksItem>
+        ))}
+      </Links>
+      <SecondaryLinks>
+        {secondaryLinks.map((link) => (
+          <LinksItem key={link.href}>
+            <Link
+              style={{ color: 'inherit', textDecoration: 'none' }}
+              activeStyle={{
+                textDecoration: 'underline',
+                textDecorationStyle: 'dotted',
+              }}
+              to={link.href}
+              partiallyActive
+            >
+              {link.title}
+            </Link>
+          </LinksItem>
+        ))}
+        <Icon isDark={isDark} toggleTheme={toggleTheme} />
+      </SecondaryLinks>
+    </div>
+  </Container>
+);
 
 export default Header;
