@@ -169,6 +169,11 @@ const LinksItem = styled.li`
   }
   transition: color 0.15s cubic-bezier(0.6, 0, 0.85, 0.72);
   -webkit-transition: color 0.15s cubic-bezier(0.6, 0, 0.85, 0.72);
+
+  &.secondary {
+    text-decoration: ${(props) => (props.active ? 'underline' : null)};
+    text-decoration-style: dotted;
+  }
 `;
 
 const Header = ({ isDark, setIsDark }) => {
@@ -202,7 +207,11 @@ const Header = ({ isDark, setIsDark }) => {
         </Links>
         <SecondaryLinks>
           {secondaryLinks.map((link) => (
-            <LinksItem key={link.href}>
+            <LinksItem
+              key={link.href}
+              className="secondary"
+              active={pathname.includes(link.href)}
+            >
               <Link
                 style={{ color: 'inherit', textDecoration: 'none' }}
                 to={link.href}
