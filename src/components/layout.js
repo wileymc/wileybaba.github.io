@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 
@@ -34,15 +34,17 @@ const Page = styled.div`
 `;
 
 const Layout = ({ children }) => {
-  let localIsDark;
+  const [localIsDark, setLocalIsDark] = useState(false);
 
-  if (typeof window !== 'undefined') {
-    if (localStorage.getItem('isDark') === 'false') {
-      localIsDark = false;
-    } else {
-      localIsDark = true;
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (localStorage.getItem('isDark') === 'false') {
+        setLocalIsDark(false);
+      } else {
+        setLocalIsDark(true);
+      }
     }
-  }
+  }, []);
 
   const [isDark, setIsDark] = useState(localIsDark);
 
