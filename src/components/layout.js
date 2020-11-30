@@ -34,7 +34,9 @@ const Page = styled.div`
 `;
 
 const Layout = ({ children }) => {
-  const [localIsDark, setLocalIsDark] = useState(false);
+  const [localIsDark, setLocalIsDark] = useState(
+    localStorage.getItem('isDark')
+  );
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
