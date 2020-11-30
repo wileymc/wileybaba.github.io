@@ -16,12 +16,7 @@ const HeavenlyBody = styled.img`
 function Icon({ isDark, toggleTheme }) {
   const themeContext = useContext(ThemeContext);
 
-  return (
-    <HeavenlyBody
-      src={themeContext.icon}
-      onClick={() => toggleTheme(isDark ? 'light' : 'dark')}
-    />
-  );
+  return <HeavenlyBody src={themeContext.icon} onClick={() => toggleTheme()} />;
 }
 
 export default Icon;

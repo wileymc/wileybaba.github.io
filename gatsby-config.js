@@ -7,8 +7,14 @@ module.exports = {
   pathPrefix: `/wileys-website`,
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-styled-components-dark-mode`,
+      options: {
+        light: `${__dirname}/src/themes/light.js`,
+        dark: `${__dirname}/src/themes/dark.js`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

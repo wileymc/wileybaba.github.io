@@ -12,5 +12,6 @@ export default {
     pink: '#ff73a9',
     blue: 'dodgerblue',
     gray: '#575757',
+    icons: '#ffffff',
   },
 };

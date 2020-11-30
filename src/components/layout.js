@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
-import { ThemeToggler } from 'gatsby-plugin-dark-mode';
+import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 
 import Header from './header';
 import Footer from './footer';
@@ -34,26 +34,23 @@ const Page = styled.div`
   padding: 1rem;
 `;
 
-const Layout = ({ children }) => (
-  <ThemeToggler>
-    {({ theme, toggleTheme }) => {
-      if (theme == null) {
-        return null;
-      }
-      return (
-        <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
-          <Container>
-            <Page>
-              <Header isDark={theme === 'dark'} toggleTheme={toggleTheme} />
-              <main>{children}</main>
-              <Footer />
-            </Page>
-          </Container>
-        </ThemeProvider>
-      );
-    }}
-  </ThemeToggler>
-);
+const Layout = ({ children }) => {
+  const themeContext = useContext(ThemeManagerContext);
+  return (
+    <ThemeProvider theme={themeContext.isDark ? darkTheme : lightTheme}>
+      <Container>
+        <Page>
+          <Header
+            isDark={themeContext.isDark}
+            toggleTheme={themeContext.toggleDark}
+          />
+          <main>{children}</main>
+          <Footer />
+        </Page>
+      </Container>
+    </ThemeProvider>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
