@@ -38,18 +38,28 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Merriweather`,
-            variants: [`400`],
-          },
-          {
-            family: `Raleway`,
-            variants: [`200`, `700`],
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: 'Merriweather',
+              variants: ['300', '400', '500'],
+              // subsets: ['latin']
+              // text: 'Hello'
+              // fontDisplay: 'swap',
+              // strategy: 'selfHosted' // 'base64' || 'cdn'
+            },
+            {
+              family: 'Oswald',
+              variants: ['500', '700'],
+            },
+          ],
+        },
+        // formats: ['woff2', 'woff'],
+        useMinify: true,
+        usePreload: true,
+        // usePreconnect: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

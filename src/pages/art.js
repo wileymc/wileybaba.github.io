@@ -46,6 +46,14 @@ export default function ArtPage() {
           }
         }
       }
+
+      glitchArt: file(relativePath: { eq: "art/glitch_art.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
@@ -104,6 +112,19 @@ export default function ArtPage() {
           <div>
             <h1>Bipolar Biped</h1>
             <h2>Marker on paper</h2>
+          </div>
+        </Card>
+        <Card className="art">
+          <Img
+            fluid={artImages.glitchArt.childImageSharp.fluid}
+            alt="glitchart image"
+            style={{ width: 'auto', filter: 'contrast(160%)' }}
+          />
+          <div>
+            <h1>Glitch Art</h1>
+            <h2>
+              Created with <a href="https://glitchart.io/">glitchart.io</a>
+            </h2>
           </div>
         </Card>
       </CardGrid>
