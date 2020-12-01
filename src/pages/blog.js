@@ -29,7 +29,6 @@ const BlogPage = ({ data }) => (
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
-      filter: { frontmatter: { draft: { eq: false } } }
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 1000
     ) {
