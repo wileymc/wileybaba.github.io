@@ -14,6 +14,10 @@ export const Card = styled.div`
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
+  &:hover {
+    transform: scale(1.02)
+  }
+
   h1 {
     font-size: 1.5em;
     margin: 1rem 0 0 0;

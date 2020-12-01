@@ -24,41 +24,47 @@ Tom Dale, one of the creators of Ember.js, summed it up by writing,
 
 Given these advantages, many web application developers are returning to the time tested practice of server-side-rendering. Yet this time around, the approach is often quite different to the glory days of simple model-view-controller based Rails applications. Nowadays, we can utilize **isomorphic JavaScript** to enjoy the user experience benefits of client-side-rendering in conjunction with the predictability and universal reach of server-side rendered content.
 
-**Isomorphic JavaScript (or Universal JS)** is JavaScript that can run on both the client and the server. Many modern front-end frameworks utilize isomorphic code. React, which I am most familiar with, allows you to implement basic SSR fairly easily. Rather that using ReactDOM's render method, we will use the hydrate method to signal to the renderer that we are rehydrating our app after an initial server side render.
+**Isomorphic JavaScript (or Universal JS)** is JavaScript that can run on both the client and the server. Many modern front-end frameworks utilize isomorphic code. React allows you to implement basic SSR fairly easily. In fact, this blog was built with Gatsby, a React "framework" for building static sites with React and server side rendering. Similar to Gatsby's code under the hood, we will use the hydrate method to signal to the renderer that we are rehydrating our app after an initial server side render.
 
-    // index.js
+```javascript
+// index.js
 
-    ReactDOM.hydrate(<App />, document.getElementById('root'));
+ReactDOM.hydrate(<App />, document.getElementById("root"));
+```
 
 Image we have a Koa instance setup to serve our fully rendered content. Here, we will import our app component from the client directory and import the ReactDOMServer to use its
 
 `renderToString` method for serving our app as a static HTML string.
 
-    // server.js
+```javascript
+// server.js
 
-    router.get('/*', (ctx, next) => {
-      const app = ReactDOMServer.renderToString(<App />)
+router.get("/*", (ctx, next) => {
+  const app = ReactDOMServer.renderToString(<App />);
 
-      const indexFile = path.resolve('./build/index.html')
-      fs.readFile(indexFile, 'utf8', (err, data) => {
-        if (err) {
-          console.error('Bummer:', err)
-          return ctx.status(500).send('Please try again.')
-        }
+  const indexFile = path.resolve("./build/index.html");
+  fs.readFile(indexFile, "utf8", (err, data) => {
+    if (err) {
+      console.error("Bummer:", err);
+      return ctx.status(500).send("Please try again.");
+    }
 
-        return ctx.send(
-          data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
-        )
-      })
-    })
+    return ctx.send(
+      data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
+    );
+  });
+});
+```
 
 While this is a trivial example, it is illustrative of the basics of implementing SSR with React. Covering routing and data fetching with SSR in React will require a separate blog post. There are many tools and frameworks that help abstract away the complexities of SSR and maintain the benefits of CSR. With React, the go-to solution is [Next.js](https://nextjs.org/)
 
 Before concluding, I will briefly touch on some of the challenges, both inherent and technical, that arise with SSR. Firstly, with isomorphic JavaScript, you have to be careful with recycling code that references the browser DOM for use on the server. You can use simple IF checks:
 
-    if (typeof window !== "undefined") {
-    	//run serverside code
-    }
+```javascript
+if (typeof window !== "undefined") {
+  //run serverside code
+}
+```
 
 Furthermore, you can set up some ESLint rules that prevent you from calling on the DOM in server side code.
 

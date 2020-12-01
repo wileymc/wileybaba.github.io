@@ -4,6 +4,7 @@ export default {
   name: 'dark',
   icon: require('../images/icons/moon.png'),
   robo: require('../images/icons/Robobrand_white.png'),
+  // codeTheme: require('../styles/prism-dark.css'),
   colors: {
     background: '#32374a',
     cardBackground: '#3e4357',

@@ -10,7 +10,7 @@ const Markdown = styled.main`
     margin: 0.25rem 0;
   }
   p + ul {
-    margin-top: -1rem;
+    /* margin-top: -1rem; */
   }
 `;
 
@@ -21,7 +21,7 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
-      <SEO title="wiley mckay conte" />
+      <SEO title="blog" />
       <div className="blog-post-container">
         <div className="blog-post">
           <h1 style={{ marginBottom: 0 }}>{frontmatter.title}</h1>

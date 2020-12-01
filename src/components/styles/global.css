@@ -30,14 +30,6 @@ li > p {
   font-size: inherit;
 }
 
-code {
-  /* enclosed by single backtick (`) */
-  padding: 0.15em 0.5em;
-  border-radius: 2px;
-  background-color: #000645;
-  color: #fff;
-}
-
 .js {
   color: #ffff33 !important;
   background-color: #cccaca !important;

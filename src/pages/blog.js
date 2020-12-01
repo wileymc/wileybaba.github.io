@@ -6,26 +6,22 @@ import Layout from '../components/layout';
 import PostListing from '../components/PostListing';
 import SEO from '../components/seo';
 
-const FancyBox = styled.div`
-  box-shadow: inset 0 0 10px #000000;
-  padding: 1rem 2rem;
-  width: fit-content;
-  border-radius: 8px;
-  p {
-    font-size: 1em;
-    line-height: 1em;
-    margin: 0;
-    color: ${(props) => props.theme.colors.pink};
-  }
-`;
+// const FancyBox = styled.div`
+//   box-shadow: inset 0 0 10px #000000;
+//   padding: 1rem 2rem;
+//   width: fit-content;
+//   border-radius: 8px;
+//   p {
+//     font-size: 1em;
+//     line-height: 1em;
+//     margin: 0;
+//     color: ${(props) => props.theme.colors.pink};
+//   }
+// `;
 
 const BlogPage = ({ data }) => (
   <Layout>
-    <SEO title="Blog" />
-    <FancyBox>
-      {/* <h2>Computer science</h2> */}
-      <p>Its been a while, but here are some of my old posts.</p>
-    </FancyBox>
+    <SEO title="blog" />
     <PostListing postEdges={data.allMarkdownRemark.edges} />
   </Layout>
 );

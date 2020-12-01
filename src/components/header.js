@@ -201,8 +201,7 @@ const Header = ({ isDark, toggleTheme }) => (
             <Link
               style={{ color: 'inherit', textDecoration: 'none' }}
               activeStyle={{
-                textDecoration: 'underline',
-                textDecorationStyle: 'dotted',
+                textDecoration: 'underline dashed',
               }}
               to={link.href}
               partiallyActive

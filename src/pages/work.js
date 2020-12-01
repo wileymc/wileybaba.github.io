@@ -6,6 +6,7 @@ import SEO from '../components/seo';
 const Style = styled.div`
   a {
     color: ${(props) => props.theme.colors.pink};
+    text-decoration: none;
   }
 `;
 
