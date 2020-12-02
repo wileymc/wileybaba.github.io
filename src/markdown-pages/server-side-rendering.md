@@ -58,10 +58,10 @@ router.get("/*", (ctx, next) => {
 
 While this is a trivial example, it is illustrative of the basics of implementing SSR with React. Covering routing and data fetching with SSR in React will require a separate blog post. There are many tools and frameworks that help abstract away the complexities of SSR and maintain the benefits of CSR. With React, the go-to solution is [Next.js](https://nextjs.org/)
 
-Before concluding, I will briefly touch on some of the challenges, both inherent and technical, that arise with SSR. Firstly, with isomorphic JavaScript, you have to be careful with recycling code that references the browser DOM for use on the server. You can use simple IF checks:
+Before concluding, I will briefly touch on some of the challenges, both inherent and technical, that arise with SSR. Firstly, with isomorphic JavaScript, you have to be careful with recycling code that references the browser DOM for use on the server. You can use a simple IF check:
 
 ```javascript
-if (typeof window !== "undefined") {
+if (typeof window == "undefined") {
   //run serverside code
 }
 ```
