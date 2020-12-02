@@ -43,7 +43,12 @@ const PostListing = ({ postEdges }) => {
           >
             <Card style={{ marginBottom: '1rem' }}>
               <Listing>
-                <h3 style={{ textDecoration: 'underline solid dodgerblue' }}>
+                <h3
+                  style={{
+                    textDecoration: 'underline solid dodgerblue',
+                    margin: '0',
+                  }}
+                >
                   {post.title}
                 </h3>
                 <p>{post.date}</p>

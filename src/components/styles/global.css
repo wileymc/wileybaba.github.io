@@ -29,31 +29,3 @@ li > p {
   line-height: 1em;
   font-size: inherit;
 }
-
-.js {
-  color: #ffff33 !important;
-  background-color: #cccaca !important;
-}
-
-.go {
-  color: #426ab9 !important;
-  background-color: #cccaca !important;
-}
-
-.python {
-  color: #54aabd !important;
-  background-color: #cccaca !important;
-}
-
-.ruby {
-  color: #9c1e1f !important;
-  background-color: #cccaca !important;
-}
-.php {
-  color: #5566aa !important;
-  background-color: #cccaca !important;
-}
-.cplus {
-  color: #5566aa !important;
-  background-color: #cccaca !important;
-}
