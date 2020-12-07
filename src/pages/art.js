@@ -87,7 +87,12 @@ export default function ArtPage() {
               }}
             >
               <h1>Tripple Handle Swirly</h1>
-              <Tag>FOR SALE</Tag>
+              <a
+                href="mailto:wileymckayconte@gmail.com?subject=Interested%20in%20purchasing%20your%20art"
+                style={{ color: 'inherit' }}
+              >
+                <Tag>FOR SALE</Tag>
+              </a>
             </div>
             <h2>Red and white stoneware</h2>
           </div>

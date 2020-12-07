@@ -3,12 +3,15 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { Card } from './base';
 
+const Container = styled.div`
+  a:hover {
+    color: ${(props) => props.theme.colors.blueLight};
+  }
+`;
+
 const Listing = styled.article`
-  a {
-    text-decoration: none;
-    &:hover {
-      color: ${(props) => props.theme.textColor};
-    }
+  h3 {
+    margin: 0;
   }
 `;
 
@@ -32,33 +35,23 @@ const PostListing = ({ postEdges }) => {
 
   const postList = getPostList();
   return (
-    <div>
-      {
-        /* Your post list here. */
-        postList.map((post) => (
-          <Link
-            to={post.path}
-            key={post.title}
-            style={{ textDecoration: 'none' }}
-          >
-            <Card style={{ marginBottom: '1rem' }}>
-              <Listing>
-                <h3
-                  style={{
-                    textDecoration: 'underline solid dodgerblue',
-                    margin: '0',
-                  }}
-                >
-                  {post.title}
-                </h3>
-                <p>{post.date}</p>
-                <p>{post.excerpt}</p>
-              </Listing>
-            </Card>
-          </Link>
-        ))
-      }
-    </div>
+    <Container>
+      {postList.map((post) => (
+        <Link
+          to={post.path}
+          key={post.title}
+          style={{ textDecoration: 'none' }}
+        >
+          <Card style={{ marginBottom: '1rem' }}>
+            <Listing>
+              <h3>{post.title}</h3>
+              <p>{post.date}</p>
+              <p>{post.excerpt}</p>
+            </Listing>
+          </Card>
+        </Link>
+      ))}
+    </Container>
   );
 };
 

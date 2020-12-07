@@ -10,8 +10,9 @@ export default {
     cardBackground: '#f0f0f0',
     headingColor: '#0080ff',
     textColor: '#333300',
-    pink: '#ff73a9',
+    pink: '#ff8fba',
     blue: 'dodgerblue',
+    blueLight: '#57b0ff',
     icons: '#575757',
   },
 };

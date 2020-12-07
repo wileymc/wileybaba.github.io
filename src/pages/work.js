@@ -6,6 +6,9 @@ import SEO from '../components/seo';
 const Style = styled.div`
   a {
     color: ${(props) => props.theme.colors.pink};
+    &:hover {
+      color: #ff73a9;
+    }
     text-decoration: none;
   }
 `;
