@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Tag } from './base';
 
-console.log(process.env.STRIPE_PUBLISHABLE_KEY);
-
 let stripePromise;
 const getStripe = () => {
   if (!stripePromise) {
@@ -16,7 +14,6 @@ const Checkout = ({ priceId, children }) => {
   const [loading, setLoading] = useState(false);
 
   const redirectToCheckout = async (event) => {
-    console.log('YOYOYO');
     event.preventDefault();
     setLoading(true);
     const stripe = await getStripe();
