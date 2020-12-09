@@ -14,10 +14,6 @@ const links = [
     href: '/art',
   },
   {
-    title: 'SHOP',
-    href: 'https://wiley.bigcartel.com',
-  },
-  {
     title: 'BOOKLIST',
     href: '/books',
   },
