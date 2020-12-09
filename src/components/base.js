@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Heading = styled.h1`
   color: ${(props) => props.theme.colors.headingColor};
 `;
+
 export const Card = styled.div`
   width: auto;
   height: fit-content;
@@ -11,10 +12,9 @@ export const Card = styled.div`
   background: ${(props) => props.theme.colors.cardBackground};
   transition: all 0.5s ease-out;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
 
   &:hover {
-    transform: scale(1.02)
+    transform: scale(1.02);
   }
 
   h1 {
