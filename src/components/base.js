@@ -4,7 +4,6 @@ export const Heading = styled.h1`
   color: ${(props) => props.theme.colors.headingColor};
 `;
 export const Card = styled.div`
-  align-content: baseline;
   width: auto;
   height: fit-content;
   padding: 1rem;
