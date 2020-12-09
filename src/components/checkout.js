@@ -22,6 +22,9 @@ const Checkout = ({ priceId, children }) => {
       lineItems: [{ price: priceId, quantity: 1 }],
       successUrl: `${process.env.ROOT_URL}/thank-you`,
       cancelUrl: `${process.env.ROOT_URL}/art`,
+      shippingAddressCollection: {
+        allowedCountries: ['US', 'CA'],
+      },
     });
     if (error) {
       console.warn('Error:', error);
