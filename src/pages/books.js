@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { BookCard, Card, CardGrid } from '../components/base';
+import { BookCard, CardGrid } from '../components/base';
 
 const books = [
   // {
@@ -210,6 +210,17 @@ const books = [
       'An enticing but dense book detailing the quest of powerful technology companies to predict and control our behavior',
   },
   {
+    title: 'Tools for Conviviality',
+    author: 'Ivan Illich',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/31eekhIkmNL._SX307_BO1,204,203,200_.jpg',
+    description:
+      'A fascinating look at ways that we as humans can work with eachother and with the tools at our disposal to mitigate the negative externalities associated with our industrial future.',
+    quotes: [
+      'A desirable future depends on our deliberately choosing a life of action over a life of consumption, on our engendering a lifestyle which will enable us to be spontaneous, independent, yet related to each other, rather than maintaining a lifestyle which only allows to make and unmake, produce and consume – a style of life which is merely a way station on the road to the depletion and pollution of the environment.',
+    ],
+  },
+  {
     title: 'Bad Blood',
     author: 'John Carreyrou',
     thumbnail:
@@ -246,7 +257,7 @@ const books = [
 
 const BooksPage = () => (
   <Layout>
-    <SEO title="Reading list" />
+    <SEO title="reading list" />
     <CardGrid columns={1}>
       {books.map((book, i) => (
         <BookCard key={i}>
@@ -255,7 +266,12 @@ const BooksPage = () => (
             <h1>{book.title}</h1>
             <h2>{book.author}</h2>
           </div>
-          <p>{book.description}</p>
+          <div className="description">
+            <p>{book.description}</p>
+            {book.quotes?.map((quote) => (
+              <blockquote>{quote}</blockquote>
+            ))}
+          </div>
         </BookCard>
       ))}
     </CardGrid>

@@ -15,7 +15,7 @@ const Style = styled.div`
 
 const BlogPage = () => (
   <Layout>
-    <SEO title="Work" />
+    <SEO title="work" />
     <Style>
       <p>
         <a href="https://legalpad.io">

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Wiley McKay Conte",
   "dependencies": {
+    "@stripe/stripe-js": "^1.11.0",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.27.5",
     "gatsby-image": "^2.6.0",

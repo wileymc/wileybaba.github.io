@@ -60,7 +60,7 @@ export const BookCard = styled(Card)`
   h2 {
     font-size: 1.2em;
   }
-  p {
+  .description {
     margin: 0;
     font-size: 1em;
     grid-area: description;
@@ -83,16 +83,25 @@ export const BookCard = styled(Card)`
   }
 `;
 
-export const Tag = styled.div`
+export const Tag = styled.button`
   font-family: 'Helvetica Neue';
   font-size: 1em;
   font-weight: 600;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  /* background: ${(props) => props.backgroundColor ?? 'azure'}; */
+  border: none;
+  cursor: pointer;
   background: linear-gradient(
     201deg,
     rgba(0, 250, 154, 1) 3%,
     rgba(30, 144, 255, 1) 56%
   );
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &:disabled {
+    cursor: 'not-allowed';
+  }
 `;

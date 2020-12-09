@@ -32,6 +32,7 @@ const Container = styled.div`
   blockquote {
     border-left: 2px solid ${(props) => props.theme.colors.pink};
     padding: 0rem 2rem;
+    font-style: italic;
   }
 `;
 

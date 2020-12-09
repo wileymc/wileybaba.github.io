@@ -8,6 +8,7 @@ import { Card, Tag } from '../components/base';
 import Swirly01 from '../videos/swirly01.mp4';
 import YouTube from '../components/YouTube';
 import Video from '../components/video';
+import Checkout from '../components/checkout';
 
 const CardGrid = styled.main`
   display: grid;
@@ -59,7 +60,7 @@ export default function ArtPage() {
 
   return (
     <Layout>
-      <SEO title="Art" />
+      <SEO title="art" />
       <CardGrid>
         <Card className="art">
           <Img
@@ -87,12 +88,9 @@ export default function ArtPage() {
               }}
             >
               <h1>Tripple Handle Swirly</h1>
-              <a
-                href="mailto:wileymckayconte@gmail.com?subject=Interested%20in%20purchasing%20your%20art"
-                style={{ color: 'inherit' }}
-              >
-                <Tag>FOR SALE</Tag>
-              </a>
+              <Checkout priceId="price_1HwKuYHNkflIFOEUjYUPvbcz">
+                FOR SALE
+              </Checkout>
             </div>
             <h2>Red and white stoneware</h2>
           </div>
