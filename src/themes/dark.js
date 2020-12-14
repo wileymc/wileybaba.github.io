@@ -7,7 +7,7 @@ export default {
   // codeTheme: require('../styles/prism-dark.css'),
   colors: {
     background: '#20232d',
-    cardBackground: '#3e4357',
+    cardBackground: '#282c38',
     headingColor: '#0080ff',
     textColor: '#ffffff',
     pink: '#ff8fba',
