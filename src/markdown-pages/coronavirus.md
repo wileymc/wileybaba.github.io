@@ -1,6 +1,6 @@
 ---
 slug: "/blog/opinions-on-the-pandemic"
-date: "2020-11-28"
+date: "2020-12-14"
 title: "Opinions on the Pandemic"
 draft: false
 ---
