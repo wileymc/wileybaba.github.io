@@ -6,6 +6,7 @@ module.exports = {
   },
   pathPrefix: `/wileys-website`,
   plugins: [
+    `gatsby-plugin-twitter`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {

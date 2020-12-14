@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
@@ -12,6 +12,17 @@ const Markdown = styled.main`
   p + ul {
     /* margin-top: -1rem; */
   }
+
+  h2 {
+    margin-top: 2rem;
+  }
+
+  p {
+    font-weight: 300;
+  }
+  strong {
+    font-weight: 600;
+  }
 `;
 
 export default function Template({
@@ -19,6 +30,16 @@ export default function Template({
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
+
+  // make all links open in new tab
+  useEffect(() => {
+    const anchors = document.querySelectorAll('a');
+    anchors.forEach((a) => {
+      a.setAttribute('target', '__blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+    });
+  }, []);
+
   return (
     <Layout>
       <SEO title="blog" />

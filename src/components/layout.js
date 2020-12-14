@@ -29,7 +29,11 @@ const Container = styled.div`
   }
   font-size: 1rem;
 
-  blockquote {
+  :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: 2rem;
+  }
+
+  blockquote:not(.twitter-tweet) {
     border-left: 2px solid ${(props) => props.theme.colors.pink};
     padding: 0rem 2rem;
     font-style: italic;
