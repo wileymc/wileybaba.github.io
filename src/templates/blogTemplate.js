@@ -29,7 +29,7 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark;
+  const { frontmatter, excerpt, html } = markdownRemark;
 
   // make all links open in new tab
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function Template({
 
   return (
     <Layout>
-      <SEO title="blog" />
+      <SEO title={frontmatter.title} article description={excerpt} />
       <div className="blog-post-container">
         <div className="blog-post">
           <h1 style={{ marginBottom: 0 }}>{frontmatter.title}</h1>
@@ -57,6 +57,7 @@ export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
+      excerpt
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         slug

@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `wiley mckay conte`,
-    description: `images, art, and writings by wiley mckay conte`,
+    title: `Wiley McKay Conte`,
     author: `Wiley McKay Conte <wileymckayconte@gmail.com>`,
   },
   pathPrefix: `/wileys-website`,

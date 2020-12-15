@@ -9,7 +9,7 @@ const QuoteContainer = styled.div`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="wiley mckay conte" />
+    <SEO title="Wiley McKay Conte" />
     <p>
       <strong>Welcome to my website.</strong> I’m a software developer with a
       background in economics and ecological agriculture. I am fascinated by
