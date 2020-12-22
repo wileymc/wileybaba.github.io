@@ -8,6 +8,7 @@ const links = [
   {
     title: 'CODE',
     href: 'https://github.com/wileybaba',
+    external: true,
   },
   {
     title: 'ART',
@@ -178,18 +179,34 @@ const Header = ({ isDark, toggleTheme }) => (
         <h1>WILEY</h1>
       </Link>
       <Links>
-        {links.map((link) => (
-          <LinksItem key={link.href}>
-            <Link
-              style={{ color: 'inherit', textDecoration: 'none' }}
-              activeStyle={{ color: '#ff73a9' }}
-              to={link.href}
-              partiallyActive
-            >
-              {link.title}
-            </Link>
-          </LinksItem>
-        ))}
+        {links.map((link) => {
+          if (link.external) {
+            return (
+              <LinksItem key={link.href}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  {link.title}
+                </a>
+              </LinksItem>
+            );
+          }
+          return (
+            <LinksItem key={link.href}>
+              <Link
+                style={{ color: 'inherit', textDecoration: 'none' }}
+                activeStyle={{ color: '#ff73a9' }}
+                to={link.href}
+                partiallyActive
+              >
+                {link.title}
+              </Link>
+            </LinksItem>
+          );
+        })}
       </Links>
       <SecondaryLinks>
         {secondaryLinks.map((link) => (
