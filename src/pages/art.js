@@ -11,17 +11,10 @@ import Checkout from '../components/checkout';
 
 const CardGrid = styled.main`
   display: grid;
-  grid-template-columns: repeat(2, minmax(8rem, 100%));
-  grid-gap: 1.5rem;
-
-  @media only screen and (min-width: 1300px) {
-    grid-template-columns: repeat(3, minmax(8rem, 100%));
-  }
-
-  @media only screen and (max-width: 600px) {
-    grid-template-columns: auto;
-    grid-gap: 1rem;
-  }
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+  grid-template-rows: masonry;
+  align-content: start;
 `;
 
 export default function ArtPage() {
