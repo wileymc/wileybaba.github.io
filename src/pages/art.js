@@ -1,11 +1,13 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { Card } from '../components/base';
 import Swirly01 from '../videos/swirly01.mp4';
+import SpiceLamp from '../videos/spicelamp.mp4';
+import SpaceChicken from '../videos/spacechicken.mp4';
 import Video from '../components/video';
 import Checkout from '../components/checkout';
 
@@ -101,10 +103,57 @@ export default function ArtPage() {
             <h2>Red and white stoneware</h2>
           </div>
         </Card>
+
+        <Card
+          className="art"
+          as={Link}
+          to="/art/spice-lamp"
+          style={{ textDecoration: 'inherit' }}
+        >
+          <Video source={SpiceLamp} showControls={false} />
+          <div>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'baseline',
+              }}
+            >
+              <h1>Spice Lamp</h1>
+            </div>
+            <h2>Red and white stoneware with black stain</h2>
+          </div>
+        </Card>
+
+        <Card
+          className="art"
+          as={Link}
+          to="/art/space-chicken"
+          style={{ textDecoration: 'inherit' }}
+        >
+          <Video
+            source={SpaceChicken}
+            showControls={false}
+            filter="brightness(115%)"
+          />
+          <div>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'baseline',
+              }}
+            >
+              <h1>Space Chicken</h1>
+            </div>
+            <h2>Red and white stoneware with black stain</h2>
+          </div>
+        </Card>
+
         <Card className="art">
           <Img
             fluid={artImages.spaceMonkey.childImageSharp.fluid}
-            alt="space moneky image"
+            alt="space monkey image"
             style={{ width: 'auto', filter: 'contrast(135%)' }}
           />
           <div>
