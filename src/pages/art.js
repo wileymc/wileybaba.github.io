@@ -120,6 +120,9 @@ export default function ArtPage() {
               }}
             >
               <h1>Spice Lamp</h1>
+              <Checkout priceId="price_1IC7YjHNkflIFOEU7frfgptk">
+                FOR SALE
+              </Checkout>
             </div>
             <h2>Red and white stoneware with black stain</h2>
           </div>
@@ -145,6 +148,9 @@ export default function ArtPage() {
               }}
             >
               <h1>Space Chicken</h1>
+              <Checkout priceId="price_1IC7c0HNkflIFOEUazBVWZsu">
+                FOR SALE
+              </Checkout>
             </div>
             <h2>Red and white stoneware with black stain</h2>
           </div>
