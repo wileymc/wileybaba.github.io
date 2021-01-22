@@ -2,6 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Wiley McKay Conte`,
     author: `Wiley McKay Conte <wileymckayconte@gmail.com>`,
+    description:
+      'Wiley is a software developer and mixed media artist based in Denver, Colorado.',
+    url: 'https://wileys.website', // No trailing slash allowed!
+    image: '/images/icons/Robobrand.png', // Path to your image you placed in the 'static' folder
+    twitterUsername: '@wiley_baba',
   },
   pathPrefix: `/wileys-website`,
   plugins: [
