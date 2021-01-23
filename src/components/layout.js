@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
-import { HelmetProvider } from 'react-helmet-async';
 
 import Header from './header';
 import Footer from './footer';
@@ -30,6 +29,10 @@ const Container = styled.div`
   }
   font-size: 1rem;
 
+  :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: 2rem;
+  }
+
   blockquote:not(.twitter-tweet) {
     border-left: 2px solid ${(props) => props.theme.colors.pink};
     padding: 0rem 2rem;
@@ -47,20 +50,18 @@ const Layout = ({ children }) => {
   const themeContext = useContext(ThemeManagerContext);
 
   return (
-    <HelmetProvider>
-      <ThemeProvider theme={themeContext.isDark ? darkTheme : lightTheme}>
-        <Container className={themeContext.isDark ? 'dark' : 'light'}>
-          <Page>
-            <Header
-              isDark={themeContext.isDark}
-              toggleTheme={themeContext.toggleDark}
-            />
-            <main>{children}</main>
-            <Footer />
-          </Page>
-        </Container>
-      </ThemeProvider>
-    </HelmetProvider>
+    <ThemeProvider theme={themeContext.isDark ? darkTheme : lightTheme}>
+      <Container className={themeContext.isDark ? 'dark' : 'light'}>
+        <Page>
+          <Header
+            isDark={themeContext.isDark}
+            toggleTheme={themeContext.toggleDark}
+          />
+          <main>{children}</main>
+          <Footer />
+        </Page>
+      </Container>
+    </ThemeProvider>
   );
 };
 

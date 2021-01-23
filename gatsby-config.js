@@ -10,8 +10,8 @@ module.exports = {
   },
   pathPrefix: `/wileys-website`,
   plugins: [
-    `gatsby-plugin-react-helmet-async`,
     `gatsby-plugin-twitter`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-styled-components-dark-mode`,
