@@ -1,7 +1,43 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import { Helmet } from 'react-helmet';
 
-// You can delete this file if you're not using it
+export const onRenderBody = ({
+  setHeadComponents,
+  setHtmlAttributes,
+  setBodyAttributes,
+}) => {
+  const helmet = Helmet.renderStatic();
+  setHtmlAttributes(helmet.htmlAttributes.toComponent());
+  setBodyAttributes(helmet.bodyAttributes.toComponent());
+  setHeadComponents([
+    helmet.title.toComponent(),
+    helmet.base.toComponent(),
+    helmet.meta.toComponent(),
+    helmet.link.toComponent(),
+    helmet.noscript.toComponent(),
+    helmet.script.toComponent(),
+    helmet.style.toComponent(),
+  ]);
+};
+
+export const onPreRenderHTML = ({
+  getHeadComponents,
+  replaceHeadComponents,
+}) => {
+  const headComponents = getHeadComponents();
+  const order = [
+    'title',
+    'base',
+    'meta',
+    'link',
+    'noscript',
+    'script',
+    'style',
+  ];
+
+  const sortedHeadComponents = headComponents
+    .slice(0)
+    .flat()
+    .sort((x, y) => order.indexOf(x.type) - order.indexOf(y.type));
+
+  replaceHeadComponents(sortedHeadComponents);
+};
