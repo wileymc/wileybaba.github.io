@@ -4,9 +4,10 @@ module.exports = {
     author: `Wiley McKay Conte <wileymckayconte@gmail.com>`,
     description:
       'Wiley is a software developer and mixed media artist based in Denver, Colorado.',
-    url: 'https://wileys.website', // No trailing slash allowed!
+    siteUrl: 'https://wileys.website', // No trailing slash allowed!
     image: '/images/icons/Robobrand.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@wiley_baba',
+    keywords: ['art', 'music', 'programming'],
   },
   pathPrefix: `/wileys-website`,
   plugins: [

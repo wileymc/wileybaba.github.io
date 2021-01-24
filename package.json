@@ -1,7 +1,7 @@
 {
-  "name": "convivial",
+  "name": "wileys.website",
   "private": true,
-  "description": "Tools for conviviality",
+  "description": "personal website of wiley mckay conte",
   "version": "0.1.0",
   "author": "Wiley McKay Conte",
   "dependencies": {

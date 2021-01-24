@@ -30,6 +30,9 @@ export default function Template({
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, excerpt, html } = markdownRemark;
+  const image = frontmatter.image
+    ? frontmatter.image.childImageSharp.resize
+    : null;
 
   // make all links open in new tab
   useEffect(() => {
@@ -42,7 +45,12 @@ export default function Template({
 
   return (
     <Layout>
-      <SEO title={frontmatter.title} article description={excerpt} />
+      <SEO
+        title={frontmatter.title}
+        article
+        description={excerpt}
+        image={image}
+      />
       <div className="blog-post-container">
         <div className="blog-post">
           <h1 style={{ marginBottom: 0 }}>{frontmatter.title}</h1>
