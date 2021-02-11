@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Wiley McKay Conte`,
+    title: `Test Title`,
     author: `Wiley McKay Conte <wileymckayconte@gmail.com>`,
     description:
       'Wiley is a software developer and mixed media artist based in Denver, Colorado.',
@@ -11,9 +11,8 @@ module.exports = {
   },
   pathPrefix: `/wileys-website`,
   plugins: [
-    `gatsby-plugin-twitter`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-next-seo`,
     {
       resolve: `gatsby-styled-components-dark-mode`,
       options: {
@@ -146,6 +145,7 @@ module.exports = {
         // usePreconnect: false,
       },
     },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
-function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
+export default function SEO({
+  description = '',
+  lang = 'en',
+  meta = [],
+  image: metaImage,
+  title,
+  pathname,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -19,99 +26,50 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
       }
     `
   );
+
   const metaDescription = description || site.siteMetadata.description;
+
   const image =
     metaImage && metaImage.src
       ? `${site.siteMetadata.siteUrl}${metaImage.src}`
       : null;
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
+
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+    <GatsbySeo
+      language={lang}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={
-        canonical
-          ? [
-              {
-                rel: 'canonical',
-                href: canonical,
-              },
-            ]
-          : []
-      }
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          name: 'keywords',
-          content: site.siteMetadata.keywords.join(','),
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ]
-        .concat(
-          metaImage
-            ? [
-                {
-                  property: 'og:image',
-                  content: image,
-                },
-                {
-                  property: 'og:image:width',
-                  content: metaImage.width,
-                },
-                {
-                  property: 'og:image:height',
-                  content: metaImage.height,
-                },
-                {
-                  name: 'twitter:card',
-                  content: 'summary_large_image',
-                },
-              ]
-            : [
-                {
-                  name: 'twitter:card',
-                  content: 'summary',
-                },
-              ]
-        )
-        .concat(meta)}
+      titleTemplate="Wiley's | %s"
+      description={metaDescription}
+      canonical={canonical}
+      metaTags={meta}
+      openGraph={{
+        url: site.siteUrl,
+        title: site.title ?? title,
+        description: metaDescription,
+        images: [
+          {
+            url: image,
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+          },
+          {
+            url: image,
+            width: 900,
+            height: 800,
+            alt: 'Og Image Alt Second',
+          },
+        ],
+        site_name: title,
+      }}
+      twitter={{
+        handle: '@wiley_baba',
+        cardType: 'summary_large_image',
+      }}
     />
   );
 }
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-};
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
@@ -124,4 +82,3 @@ SEO.propTypes = {
   }),
   pathname: PropTypes.string,
 };
-export default SEO;
