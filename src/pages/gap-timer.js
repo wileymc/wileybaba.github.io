@@ -11,13 +11,16 @@ const IndexPage = () => (
     <SEO title="Gap Timer" />
 
     <h1 style={{ textAlign: 'center' }}>Gap Timer</h1>
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <a
+      style={{ display: 'flex', justifyContent: 'center' }}
+      href="https://apps.apple.com/ru/app/gap-timer/id1530987670#?platform=iphone"
+    >
       <img
         src={timerLogoPath}
         style={{ borderRadius: '25%' }}
         alt="colorful circle on black"
       />
-    </div>
+    </a>
     <p>
       A simple, yet powerful tool for high intensity interval training. Or
       cooking. Or anything that uses a timer and you like these colors better
