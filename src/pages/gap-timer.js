@@ -13,7 +13,7 @@ const IndexPage = () => (
     <h1 style={{ textAlign: 'center' }}>Gap Timer</h1>
     <a
       style={{ display: 'flex', justifyContent: 'center' }}
-      href="https://apps.apple.com/ru/app/gap-timer/id1530987670#?platform=iphone"
+      href="https://apps.apple.com/us/app/gap-timer/id1530987670#?platform=iphone"
     >
       <img
         src={timerLogoPath}
@@ -30,7 +30,7 @@ const IndexPage = () => (
 
     <a
       style={{ display: 'flex', justifyContent: 'center' }}
-      href="https://apps.apple.com/ru/app/gap-timer/id1530987670#?platform=iphone"
+      href="https://apps.apple.com/us/app/gap-timer/id1530987670#?platform=iphone"
     >
       <img src={appStorePath} alt="apple app store download" />
     </a>
