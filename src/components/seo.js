@@ -39,7 +39,7 @@ export default function SEO({
     <GatsbySeo
       language={lang}
       title={title}
-      titleTemplate="Wiley's | %s"
+      titleTemplate="Wiley's %s"
       description={metaDescription}
       canonical={canonical}
       metaTags={meta}

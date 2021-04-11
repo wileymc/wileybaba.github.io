@@ -9,7 +9,7 @@ const QuoteContainer = styled.div`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Wiley's website" />
+    <SEO title="website" />
     <p>
       <strong>Welcome to my website.</strong> I’m a software developer with a
       background in economics and ecological agriculture. I am fascinated by
@@ -20,22 +20,6 @@ const IndexPage = () => (
       <a href="https://legalpad.io">Legalpad</a>. Please reach out to me on one
       of the channels below if you’d like to connect.
     </p>
-    {/* <QuoteContainer>
-      <blockquote cite="https://www.huxley.net/bnw/four.html">
-        <p>
-          A desirable future depends on our deliberately choosing a life of
-          action over a life of consumption, on our engendering a lifestyle
-          which will enable us to be spontaneous, independent, yet related to
-          each other, rather than maintaining a lifestyle which only allows to
-          make and unmake, produce and consume – a style of life which is merely
-          a way station on the road to the depletion and pollution of the
-          environment.
-        </p>
-        <footer>
-          —Ivan Illich, <cite>Tools for Conviviality</cite>
-        </footer>
-      </blockquote>
-    </QuoteContainer> */}
   </Layout>
 );
 
