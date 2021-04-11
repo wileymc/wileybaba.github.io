@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -30,9 +31,8 @@ export default function Template({
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, excerpt, html } = markdownRemark;
-  const image = frontmatter.image
-    ? frontmatter.image.childImageSharp.resize
-    : null;
+
+  const featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid;
 
   // make all links open in new tab
   useEffect(() => {
@@ -49,12 +49,13 @@ export default function Template({
         title={frontmatter.title}
         article
         description={excerpt}
-        image={image}
+        image={featuredImgFluid}
       />
       <div className="blog-post-container">
         <div className="blog-post">
-          <h1 style={{ marginBottom: 0 }}>{frontmatter.title}</h1>
+          <h1 style={{ marginBottom: '0.25rem' }}>{frontmatter.title}</h1>
           <small>{frontmatter.date}</small>
+          {/* <Img fluid={featuredImgFluid} style={{ marginTop: '1.25rem' }} /> */}
           <Markdown dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>
@@ -70,6 +71,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

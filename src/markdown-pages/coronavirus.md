@@ -2,7 +2,7 @@
 slug: "/blog/opinions-on-the-pandemic"
 date: "2020-12-14"
 title: "Opinions on the Pandemic"
-image: "/images/art/bipolar_depression.jpg"
+featuredImage: ../images/art/bipolar_depression.jpg
 draft: false
 ---
 
