@@ -44,6 +44,15 @@ const BlogPage = () => (
         Boulder, Colorado. Our major focus is education and the advancedment of
         the studio arts.
       </p>
+
+      <p>
+        <a href="https://apps.apple.com/us/app/gap-timer/id1530987670">
+          <strong>Gap Timer</strong>
+        </a>{' '}
+        is a simple yet powerful iOS app for high intensity interval training. I
+        wasn't happy with existing interval timers available on the App Store,
+        so I build my own.
+      </p>
     </Style>
   </Layout>
 );
