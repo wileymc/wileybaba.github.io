@@ -51,7 +51,7 @@ const BlogPage = () => (
         </a>{' '}
         is a simple yet powerful iOS app for high intensity interval training. I
         wasn't happy with existing interval timers available on the App Store,
-        so I build my own.
+        so I built my own.
       </p>
     </Style>
   </Layout>
