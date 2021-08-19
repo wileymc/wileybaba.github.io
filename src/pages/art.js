@@ -66,6 +66,8 @@ export default function ArtPage() {
     }
   `);
 
+  console.log(artImages);
+
   return (
     <Layout>
       <SEO title="art" />

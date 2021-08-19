@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import React from 'react';
+import styled from 'styled-components';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const Style = styled.div`
   a {
@@ -19,8 +19,8 @@ const BlogPage = () => (
     <Style>
       <p>
         <a href="https://dreamstage.live">
-          <strong>DREAMSTAGE</strong>
-        </a>{" "}
+          <strong>Dreamstage</strong>
+        </a>{' '}
         is revolutionizing the live concert experience with high fidelity audio
         and video streaming, directly to your device. We broadcast performances
         of all genres live and on demand, allowing fans across the world to
@@ -30,7 +30,7 @@ const BlogPage = () => (
       <p>
         <a href="https://populist.us">
           <strong>Populist</strong>
-        </a>{" "}
+        </a>{' '}
         is an ambitious project that is working to connect people to their
         local, state, and federal governments. We are driving civic engagement
         and working to enable a more modern and just democracy for voters,
@@ -40,7 +40,7 @@ const BlogPage = () => (
       <p>
         <a href="https://studioartsboulder.org">
           <strong>Studio Arts Boulder</strong>
-        </a>{" "}
+        </a>{' '}
         runs the Pottery Lab, a community art studio where I volunteer based in
         Boulder, Colorado. Our major focus is education and the advancedment of
         the studio arts.
@@ -49,7 +49,7 @@ const BlogPage = () => (
       <p>
         <a href="https://apps.apple.com/us/app/gap-timer/id1530987670">
           <strong>Gap Timer</strong>
-        </a>{" "}
+        </a>{' '}
         is a simple yet powerful iOS app for high intensity interval training. I
         wasn't happy with existing interval timers available on the App Store,
         so I built my own.

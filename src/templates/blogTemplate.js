@@ -32,8 +32,6 @@ export default function Template({
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, excerpt, html } = markdownRemark;
 
-  const featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid;
-
   // make all links open in new tab
   useEffect(() => {
     const anchors = document.querySelectorAll('a');
@@ -45,17 +43,11 @@ export default function Template({
 
   return (
     <Layout>
-      <SEO
-        title={frontmatter.title}
-        article
-        description={excerpt}
-        image={featuredImgFluid}
-      />
+      <SEO title={frontmatter.title} article description={excerpt} />
       <div className="blog-post-container">
         <div className="blog-post">
           <h1 style={{ marginBottom: '0.25rem' }}>{frontmatter.title}</h1>
           <small>{frontmatter.date}</small>
-          {/* <Img fluid={featuredImgFluid} style={{ marginTop: '1.25rem' }} /> */}
           <Markdown dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>
@@ -63,7 +55,7 @@ export default function Template({
   );
 }
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       excerpt
@@ -71,13 +63,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }
