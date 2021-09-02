@@ -25,6 +25,9 @@ const books = [
       'https://images-na.ssl-images-amazon.com/images/I/51gX+me3emL._SX317_BO1,204,203,200_.jpg',
     description:
       'Fantastic space fantasy set in the outer Solar System, where Belters, those who grew up in the colonies of the Asteroid belt, carry out the blue collar labor that sustains humans with essential natural resources.',
+    quotes: [
+      'Liquor doesn’t make you feel better. Just makes you not so worried about feeling bad.',
+    ],
   },
   {
     title: 'Scale',
@@ -33,6 +36,9 @@ const books = [
       'https://images-na.ssl-images-amazon.com/images/I/51aqYDPBk6L._SX324_BO1,204,203,200_.jpg',
     description:
       'Mathematical look at universal scaling laws of life, growth, and death, in organisms, cities, and companies.  Filled with fun facts and figures.',
+    quotes: [
+      'While exponential growth is a remarkable manifestation of our extraordinary accomplishments as a species, built into it are the potential seeds of our demise and the portent of big troubles just around the next corner.',
+    ],
   },
   {
     title: 'Dune',
@@ -41,6 +47,10 @@ const books = [
       'https://images-na.ssl-images-amazon.com/images/I/91Fq9Amx0pL.jpg',
     description:
       "I've taken the plunge into the world of the sand planet Arrakis, and there is no looking back. Herberts first novel in the Dune series walks us through an epic journey of mother and son, of betrayal and sacrifice, of life on the unforgiving desert planet of Dune.  Water is scarce and gigantic sand worms are plenty.",
+    quotes: [
+      "If you need something to worship, then worship life — all life, every last crawling bit of it! We're all in this beauty together!",
+      'Seek freedom and become captive of your desires. Seek discipline and find your liberty.',
+    ],
   },
   {
     title: 'I Contain Multitudes: The Microbes Within Us',
@@ -95,6 +105,9 @@ const books = [
     thumbnail: 'https://upload.wikimedia.org/wikipedia/en/a/af/Island.JPG',
     description:
       'Fascinating work of utopian fiction detailing the account of a shipwrecked journalist who finds himself on the island of Pala, where Buddhism, free and open sex, and psychedelic drug use are the norm',
+    quotes: [
+      "Armaments, universal debt, and planned obsolescence—those are the three pillars of Western prosperity. If war, waste, and moneylenders were abolished, you'd collapse. And while you people are overconsuming the rest of the world sinks more and more deeply into chronic disaster.",
+    ],
   },
   {
     title: 'New York 2140',
@@ -190,6 +203,9 @@ const books = [
       'https://images-na.ssl-images-amazon.com/images/I/51eUw-v0X%2BL._SX329_BO1,204,203,200_.jpg',
     description:
       'A quick read the explores a number of pertinent cases where reliance on big data and machine learning is creating negative feedback loops that increase socioeconomic inequality.',
+    quotes: [
+      'Police make choices about where they direct their attention. Today they focus almost exclusively on the poor. […] And now data scientists are stitching this status quo of the social order into models, like PredPol, that hold ever-greater sway over our lives.',
+    ],
   },
   {
     title: 'Change Agent',

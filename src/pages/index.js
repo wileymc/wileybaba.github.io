@@ -1,11 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-
-const QuoteContainer = styled.div`
-  border-left: 2px solid ${(props) => props.theme.colors.pink};
-`;
 
 const IndexPage = () => (
   <Layout>

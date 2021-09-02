@@ -34,9 +34,14 @@ const Container = styled.div`
   }
 
   blockquote:not(.twitter-tweet) {
+    margin-inline-start: 10px;
+
     border-left: 2px solid ${(props) => props.theme.colors.pink};
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
     font-style: italic;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
   }
 `;
 
