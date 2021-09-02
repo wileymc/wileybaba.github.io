@@ -53,14 +53,14 @@ const Container = styled.div`
   h1 {
     grid-area: header;
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     letter-spacing: 0.1rem;
     background: linear-gradient(
-      92.05deg,
+      82.05deg,
       dodgerblue 12.09%,
       mediumspringgreen 42.58%,
-      #ff7170 84.96%
+      #ff8fba 84.96%
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -102,8 +102,8 @@ const Container = styled.div`
 
 const RoboLogo = styled.img`
   grid-area: logo;
-  height: 100px;
-  height: 100px;
+  height: 92px;
+  height: 92px;
   cursor: pointer;
   transition: all 0.5s ease-out;
   @media only screen and (max-width: 600px) {

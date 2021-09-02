@@ -1,6 +1,4 @@
 import React from 'react';
-
-import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { BookCard, CardGrid } from '../components/base';
@@ -12,6 +10,30 @@ const books = [
   //   thumbnail: '',
   //   description: '',
   // },
+  {
+    title: 'Genius Makers',
+    author: 'Cade Metz',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/41dNzqcvR4L._SX329_BO1,204,203,200_.jpg',
+    description:
+      'Colorful look at the people who brought deep learning into the mainstream at companies like Google and Facebook.',
+  },
+  {
+    title: 'Leviathan Wakes',
+    author: 'James S.A. Corey',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/51gX+me3emL._SX317_BO1,204,203,200_.jpg',
+    description:
+      'Fantastic space fantasy set in the outer Solar System, where Belters, those who grew up in the colonies of the Asteroid belt, carry out the blue collar labor that sustains humans with essential natural resources.',
+  },
+  {
+    title: 'Scale',
+    author: 'Geoffrey West',
+    thumbnail:
+      'https://images-na.ssl-images-amazon.com/images/I/51aqYDPBk6L._SX324_BO1,204,203,200_.jpg',
+    description:
+      'Mathematical look at universal scaling laws of life, growth, and death, in organisms, cities, and companies.  Filled with fun facts and figures.',
+  },
   {
     title: 'Dune',
     author: 'Frank Herbert',
