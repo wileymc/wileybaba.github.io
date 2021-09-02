@@ -208,6 +208,13 @@ const books = [
       'A lovely collection of talks from Trungpa, illustrating that spirutality can be hijacked for selfish purposes...and it often is in the west.',
   },
   {
+    title: 'In the Garden of Beasts',
+    author: 'Erik Larson',
+    thumbnail: 'https://m.media-amazon.com/images/I/51toRqFyFrL.jpg',
+    description:
+      "The electric story of Willliam E. Dodd, the first ambassador to Hitler's Nazi Germany during the rise of the Third Reicht.",
+  },
+  {
     title: 'The Undoing Project',
     author: 'Michael Lewis',
     thumbnail:
