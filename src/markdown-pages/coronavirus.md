@@ -1,5 +1,5 @@
 ---
-slug: "/blog/opinions-on-the-pandemic"
+slug: "/notes/opinions-on-the-pandemic"
 date: "2020-12-14"
 title: "Opinions on the Pandemic"
 featuredImage: ../images/art/bipolar_depression.jpg

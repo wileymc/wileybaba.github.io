@@ -1,33 +1,33 @@
-import { Link } from 'gatsby';
-import React, { useContext } from 'react';
-import styled, { ThemeContext } from 'styled-components';
+import { Link } from "gatsby";
+import React, { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 
-import Icon from './icon';
+import Icon from "./icon";
 
 const links = [
   {
-    title: 'CODE',
-    href: 'https://github.com/wileybaba',
+    title: "CODE",
+    href: "https://github.com/wileybaba",
     external: true,
   },
   {
-    title: 'ART',
-    href: '/art',
+    title: "ART",
+    href: "/art",
   },
   {
-    title: 'BOOKLIST',
-    href: '/books',
+    title: "BOOKLIST",
+    href: "/books",
   },
 ];
 
 const secondaryLinks = [
   {
-    title: 'MY WORK',
-    href: '/work',
+    title: "MY WORK",
+    href: "/work",
   },
   {
-    title: 'BLOG',
-    href: '/blog',
+    title: "NOTES",
+    href: "/notes",
   },
 ];
 
@@ -41,9 +41,9 @@ const Container = styled.div`
   grid-gap: 1rem;
   margin-bottom: 10vh;
   grid-template-areas:
-    'logo header'
-    'logo mainLinks'
-    'logo secondaryLinks';
+    "logo header"
+    "logo mainLinks"
+    "logo secondaryLinks";
   background-color: ${(props) => props.theme.colors.background};
   transition: all 0.5s ease-out;
   a {
@@ -54,7 +54,7 @@ const Container = styled.div`
     grid-area: header;
     margin: 0;
     font-size: 2.5rem;
-    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: "Helvetica Neue", "Arial", sans-serif;
     letter-spacing: 0.1rem;
     background: linear-gradient(
       82.05deg,
@@ -94,8 +94,8 @@ const Container = styled.div`
   }
 
   li {
-    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
   }
 `;
@@ -167,12 +167,12 @@ const LinksItem = styled.li`
 const Header = ({ isDark, toggleTheme }) => (
   <Container>
     <RoboBrand />
-    <div style={{ marginTop: '-0.3rem' }}>
+    <div style={{ marginTop: "-0.3rem" }}>
       <Link
         style={{
-          color: 'inherit',
-          textDecoration: 'none',
-          gridArea: 'header',
+          color: "inherit",
+          textDecoration: "none",
+          gridArea: "header",
         }}
         to="/"
       >
@@ -187,7 +187,7 @@ const Header = ({ isDark, toggleTheme }) => (
                   href={link.href}
                   target="_blank"
                   rel="noreferrer"
-                  style={{ color: 'inherit', textDecoration: 'none' }}
+                  style={{ color: "inherit", textDecoration: "none" }}
                 >
                   {link.title}
                 </a>
@@ -197,8 +197,8 @@ const Header = ({ isDark, toggleTheme }) => (
           return (
             <LinksItem key={link.href}>
               <Link
-                style={{ color: 'inherit', textDecoration: 'none' }}
-                activeStyle={{ color: '#ff73a9' }}
+                style={{ color: "inherit", textDecoration: "none" }}
+                activeStyle={{ color: "#ff73a9" }}
                 to={link.href}
                 partiallyActive
               >
@@ -212,9 +212,9 @@ const Header = ({ isDark, toggleTheme }) => (
         {secondaryLinks.map((link) => (
           <LinksItem key={link.href}>
             <Link
-              style={{ color: 'inherit', textDecoration: 'none' }}
+              style={{ color: "inherit", textDecoration: "none" }}
               activeStyle={{
-                textDecoration: 'underline dotted',
+                textDecoration: "underline dotted",
               }}
               to={link.href}
               partiallyActive

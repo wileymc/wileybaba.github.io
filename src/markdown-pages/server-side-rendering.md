@@ -1,5 +1,5 @@
 ---
-slug: "/blog/server-side-rendering"
+slug: "/notes/server-side-rendering"
 date: "2019-08-13"
 title: "Is Server Side Rendering Back in Vogue?"
 draft: false

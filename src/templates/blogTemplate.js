@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
-import { graphql } from 'gatsby';
-import styled from 'styled-components';
-import Img from 'gatsby-image';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import React, { useEffect } from "react";
+import { graphql } from "gatsby";
+import styled from "styled-components";
+import Img from "gatsby-image";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const Markdown = styled.main`
   li {
@@ -34,10 +34,10 @@ export default function Template({
 
   // make all links open in new tab
   useEffect(() => {
-    const anchors = document.querySelectorAll('a');
+    const anchors = document.querySelectorAll("a");
     anchors.forEach((a) => {
-      a.setAttribute('target', '__blank');
-      a.setAttribute('rel', 'noopener noreferrer');
+      a.setAttribute("target", "__blank");
+      a.setAttribute("rel", "noopener noreferrer");
     });
   }, []);
 
@@ -46,7 +46,7 @@ export default function Template({
       <SEO title={frontmatter.title} article description={excerpt} />
       <div className="blog-post-container">
         <div className="blog-post">
-          <h1 style={{ marginBottom: '0.25rem' }}>{frontmatter.title}</h1>
+          <h1 style={{ marginBottom: "0.25rem" }}>{frontmatter.title}</h1>
           <small>{frontmatter.date}</small>
           <Markdown dangerouslySetInnerHTML={{ __html: html }} />
         </div>

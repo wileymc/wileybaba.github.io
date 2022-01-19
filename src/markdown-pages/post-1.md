@@ -1,5 +1,5 @@
 ---
-slug: "/blog/javascript-frameworks"
+slug: "/notes/javascript-frameworks"
 date: "2018-02-28"
 title: "Choosing a JavaScript Framework"
 draft: false

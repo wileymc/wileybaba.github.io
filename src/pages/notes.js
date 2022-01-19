@@ -1,12 +1,12 @@
-import { graphql } from 'gatsby';
-import React from 'react';
-import Layout from '../components/layout';
-import PostListing from '../components/PostListing';
-import SEO from '../components/seo';
+import { graphql } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import PostListing from "../components/PostListing";
+import SEO from "../components/seo";
 
-const BlogPage = ({ data }) => (
+const NotesPage = ({ data }) => (
   <Layout>
-    <SEO title="blog" />
+    <SEO title="notes" />
     <PostListing postEdges={data.allMarkdownRemark.edges} />
   </Layout>
 );
@@ -30,4 +30,4 @@ export const pageQuery = graphql`
     }
   }
 `;
-export default BlogPage;
+export default NotesPage;
