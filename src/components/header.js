@@ -32,9 +32,6 @@ const secondaryLinks = [
 ];
 
 const Container = styled.div`
-  @media only screen and (min-width: 600px) {
-    margin-top: 6rem;
-  }
   max-width: fit-content;
   height: 4rem;
   display: grid;
