@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[18],{VrxC:function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return i}));var a=n("q1tI"),r=n.n(a),o=n("17Ek"),c=n("Bl7J");function i(){return r.a.createElement(c.a,{noHeader:!0,noFooter:!0},r.a.createElement("div",{style:{display:"flex",justifyContent:"center",alignItems:"center"}},r.a.createElement(o.a,{width:"50vmax"})))}}}]);
+//# sourceMappingURL=component---src-pages-phrontistery-js-aa789f081bd07d4a2082.js.map
