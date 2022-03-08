@@ -60,19 +60,21 @@ const Page = styled.div`
   }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ noHeader = false, noFooter = false, children }) => {
   const themeContext = useContext(ThemeManagerContext);
 
   return (
     <ThemeProvider theme={themeContext.isDark ? darkTheme : lightTheme}>
       <Container className={themeContext.isDark ? "dark" : "light"}>
         <Page>
-          <Header
-            isDark={themeContext.isDark}
-            toggleTheme={themeContext.toggleDark}
-          />
+          {!noHeader && (
+            <Header
+              isDark={themeContext.isDark}
+              toggleTheme={themeContext.toggleDark}
+            />
+          )}
           <main>{children}</main>
-          <Footer />
+          {!noFooter && <Footer />}
         </Page>
       </Container>
     </ThemeProvider>

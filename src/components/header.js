@@ -1,8 +1,9 @@
 import { Link } from "gatsby";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styled, { ThemeContext } from "styled-components";
 
 import Icon from "./icon";
+import Doodle from "./doodle";
 
 const links = [
   {
@@ -36,7 +37,7 @@ const Container = styled.div`
   height: 4rem;
   display: grid;
   grid-gap: 1rem;
-  margin-bottom: 10vh;
+  margin-bottom: 7vh;
   grid-template-areas:
     "logo header"
     "logo mainLinks"
@@ -49,7 +50,7 @@ const Container = styled.div`
   }
   h1 {
     grid-area: header;
-    margin: 0;
+    margin: -7px 0 0 0;
     font-size: 1.75rem;
     font-family: "Helvetica Neue", "Arial", sans-serif;
     letter-spacing: 0.1rem;
@@ -161,69 +162,73 @@ const LinksItem = styled.li`
   }
 `;
 
-const Header = ({ isDark, toggleTheme }) => (
-  <Container>
-    <RoboBrand />
-    <div style={{ marginTop: "-0.3rem" }}>
-      <Link
-        style={{
-          color: "inherit",
-          textDecoration: "none",
-          gridArea: "header",
-        }}
-        to="/"
-      >
-        <h1>WILEY</h1>
+const Header = ({ isDark, toggleTheme }) => {
+  return (
+    <Container>
+      <Link to="/phrontistery">
+        <Doodle />
       </Link>
-      <Links>
-        {links.map((link) => {
-          if (link.external) {
+      <div>
+        <Link
+          style={{
+            color: "inherit",
+            textDecoration: "none",
+            gridArea: "header",
+          }}
+          to="/"
+        >
+          <h1>WILEY</h1>
+        </Link>
+        <Links>
+          {links.map((link) => {
+            if (link.external) {
+              return (
+                <LinksItem key={link.href}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    {link.title}
+                  </a>
+                </LinksItem>
+              );
+            }
             return (
               <LinksItem key={link.href}>
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
+                <Link
                   style={{ color: "inherit", textDecoration: "none" }}
+                  activeStyle={{ color: "#ff73a9" }}
+                  to={link.href}
+                  partiallyActive
                 >
                   {link.title}
-                </a>
+                </Link>
               </LinksItem>
             );
-          }
-          return (
+          })}
+        </Links>
+        <SecondaryLinks>
+          {secondaryLinks.map((link) => (
             <LinksItem key={link.href}>
               <Link
                 style={{ color: "inherit", textDecoration: "none" }}
-                activeStyle={{ color: "#ff73a9" }}
+                activeStyle={{
+                  textDecoration: "underline dotted",
+                }}
                 to={link.href}
                 partiallyActive
               >
                 {link.title}
               </Link>
             </LinksItem>
-          );
-        })}
-      </Links>
-      <SecondaryLinks>
-        {secondaryLinks.map((link) => (
-          <LinksItem key={link.href}>
-            <Link
-              style={{ color: "inherit", textDecoration: "none" }}
-              activeStyle={{
-                textDecoration: "underline dotted",
-              }}
-              to={link.href}
-              partiallyActive
-            >
-              {link.title}
-            </Link>
-          </LinksItem>
-        ))}
-        <Icon isDark={isDark} toggleTheme={toggleTheme} />
-      </SecondaryLinks>
-    </div>
-  </Container>
-);
+          ))}
+          <Icon isDark={isDark} toggleTheme={toggleTheme} />
+        </SecondaryLinks>
+      </div>
+    </Container>
+  );
+};
 
 export default Header;

@@ -4274,6 +4274,11 @@
     "postcss" "^7.0.1"
     "timsort" "^0.3.0"
 
+"css-doodle@^0.26.1":
+  "integrity" "sha512-5/4JHMDloxKkDNpdGuRn6AkllPmcHBuXh64EFvhOzB325d5gidJVJEzwCsZaeP7ZmApOiw1gqxRDBZbdwYlB7w=="
+  "resolved" "https://registry.npmjs.org/css-doodle/-/css-doodle-0.26.1.tgz"
+  "version" "0.26.1"
+
 "css-loader@^1.0.1":
   "integrity" "sha512-+ZHAZm/yqvJ2kDtPne3uX0C+Vr3Zn5jFn2N4HywtS5ujwvsVkyg0VArEXpl3BgczDA8anieki1FIzhchX4yrDw=="
   "resolved" "https://registry.npmjs.org/css-loader/-/css-loader-1.0.1.tgz"
