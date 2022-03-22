@@ -11,6 +11,14 @@ const books = [
   //   description: '',
   // },
   {
+    title: "Parable of the Sower",
+    author: "Octavia Butler",
+    thumbnail:
+      "https://images-na.ssl-images-amazon.com/images/I/412iw+DnlvL._SX325_BO1,204,203,200_.jpg",
+    description:
+      "A novel about a young womans terrifying escape from a dark and dystopian Los Angeles.  Through her journey, she captivates and inspires others to join her community and the group supports and protects one another from the cabal of thieves, murderers, arsonists, and rapists on the road.",
+  },
+  {
     title: "Reamde",
     author: "Neal Stephenson",
     thumbnail:
