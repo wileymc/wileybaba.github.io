@@ -1,12 +1,12 @@
-import { Link } from 'gatsby';
-import React from 'react';
+import { Link } from "gatsby";
+import React from "react";
 import {
   AiFillTwitterCircle,
   AiFillInstagram,
   AiFillMail,
-} from 'react-icons/ai';
-import { FaCodeBranch } from 'react-icons/fa';
-import styled from 'styled-components';
+} from "react-icons/ai";
+import { FaCodeBranch } from "react-icons/fa";
+import styled from "styled-components";
 
 const Container = styled.footer`
   margin-top: 5vh;
@@ -28,7 +28,11 @@ const Container = styled.footer`
 
 const Footer = () => (
   <Container>
-    <a href="https://twitter.com/wiley_baba" target="_blank" rel="noreferrer">
+    <a
+      href="https://twitter.com/wileymckayconte"
+      target="_blank"
+      rel="noreferrer"
+    >
       <AiFillTwitterCircle size="1.5rem" />
     </a>
     <a href="https://instagram.com/wileybaba" target="_blank" rel="noreferrer">
@@ -43,7 +47,7 @@ const Footer = () => (
       <AiFillMail size="1.5rem" />
     </a>
     <a
-      href="https://github.com/wileybaba/wileybaba.github.io"
+      href="https://github.com/wileymc/wileybaba.github.io"
       target="_blank"
       rel="noreferrer"
       title="fork this site"
